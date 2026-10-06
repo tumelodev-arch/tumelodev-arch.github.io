@@ -21,6 +21,12 @@ Open `index.html` in a browser or use any local static file server.
 
 ## GitHub Pages
 
-Publish the repository root from the `main` branch in **Settings → Pages**. The site uses relative file links and works as a static GitHub Pages site.
+The site is published from the repository root on `main`: <https://tumelodev-arch.github.io/>. The site uses relative file links and has no build step.
 
-Before publishing, confirm that work-related details are allowed by Sage's public disclosure policy.
+Before changing or adding work-related details, confirm they are allowed by Sage's public disclosure policy.
+
+## Profile and engineering resources
+
+- [GitHub profile README source](github-profile/README.md)
+- [Profile audit, flagship architectures, AWS evidence map, and 90-day roadmap](docs/github-profile-strategy.md)
+- [Reusable repository standards and .NET/AWS workflow templates](templates/repository-standard/)

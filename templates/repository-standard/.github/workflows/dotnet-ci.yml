@@ -1,0 +1,58 @@
+name: .NET CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dotnet-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Install .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore src/App.sln
+
+      - name: Verify formatting
+        run: dotnet format src/App.sln --verify-no-changes --no-restore
+
+      - name: Build
+        run: dotnet build src/App.sln --configuration Release --no-restore
+
+      - name: Test with coverage
+        run: dotnet test src/App.sln --configuration Release --no-build --collect:"XPlat Code Coverage" --results-directory ./TestResults
+
+      - name: Upload coverage files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ github.run_id }}
+          path: TestResults/**/coverage.cobertura.xml
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Publish coverage to Codecov
+        if: ${{ vars.CODECOV_UPLOAD == 'true' }}
+        uses: codecov/codecov-action@v5
+        with:
+          files: TestResults/**/coverage.cobertura.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+
+      - name: Build container image
+        run: docker build --tag app:${{ github.sha }} .
