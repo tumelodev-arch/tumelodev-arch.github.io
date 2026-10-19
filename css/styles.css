@@ -244,3 +244,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .cv-sheet section h3 { font-size: 8pt; }
   a { color: #222; text-decoration: none; }
 }
+
+.project-limitation { margin: .65rem 0 0; color: #77766c; font-size: .72rem; line-height: 1.45; }
