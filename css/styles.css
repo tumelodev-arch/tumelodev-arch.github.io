@@ -249,20 +249,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 
 /* Portfolio refinement: split editorial opening, dark project surfaces, teal system. */
-:root {
-  --paper: #f5f3ed;
-  --paper-2: #eae9e1;
-  --surface: #fffefa;
-  --ink: #252f31;
-  --muted: #596765;
-  --soft-muted: #727e7a;
-  --line: #d5dcd5;
-  --line-dark: #b4c2bb;
-  --accent: #347f7a;
-  --accent-dark: #235e5a;
-  --accent-light: #e1eeea;
-  --rust: #a65b41;
-}
+/* Legacy teal palette variables removed; shared charcoal/neon-green tokens are defined at the top. */
 html, body, .site-header { background: var(--paper); }
 .intro-section { padding-block: clamp(2.2rem, 4vw, 3.4rem) 2.2rem; }
 .intro-layout { grid-template-columns: minmax(0, 1.1fr) minmax(16rem, .7fr); align-items: stretch; gap: clamp(1.4rem, 4vw, 4rem); }
