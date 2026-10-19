@@ -43,7 +43,7 @@ curl -X POST http://localhost:5080/api/validate \
 Run tests:
 
 ```sh
-dotnet test
+dotnet test tests/RuleTrace.Api.Tests/RuleTrace.Api.Tests.csproj
 ```
 
 ## Example rules
