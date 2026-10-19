@@ -8,17 +8,24 @@ A multi-page personal portfolio built with HTML, CSS, and vanilla JavaScript. Th
 
 This repository contains my personal portfolio, presenting my background, professional experience, technical interests, and CV.
 
-The project is intentionally lightweight: the website uses standard browser technologies and can be reviewed without installing a JavaScript framework or running a build pipeline.
+The project is intentionally lightweight: the website uses standard browser technologies and can be reviewed without installing a JavaScript framework or running a build pipeline. The refreshed design uses a restrained dark palette, clear typography, responsive layouts, and small purposeful interactions rather than animation-heavy effects.
 
 ## Site Pages
 
 | File | Purpose |
 | --- | --- |
 | `index.html` | Portfolio home page |
-| `work.html` | Employment background and selected technical work |
+| `work.html` | Employment background, selected technical work, interactive category filters, and a clearly labelled planned-project roadmap |
 | `about.html` | Engineering approach, technical toolkit, strengths, and education |
 | `contact.html` | Contact details and profile links |
 | `cv.html` | CV page with PDF download and print option |
+
+## Interactions and project status
+
+- The Work page can be filtered by professional work, learning exercises, or planned work.
+- Planned concepts use explicit **Planned** labels and expandable next-step notes; they are not presented as finished or in-progress implementations.
+- The homepage previews the roadmap and links to the Work page for details.
+- Reduced-motion preferences are respected, and the filter controls expose their selected state to assistive technology.
 
 ## CV
 
