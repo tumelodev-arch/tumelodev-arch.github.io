@@ -5,7 +5,7 @@ A small, multi-page portfolio built with semantic HTML, modern CSS and vanilla J
 ## Pages
 
 - `index.html`: short introduction, two featured implementations, technical foundation and a recent engineering note.
-- `work.html`: project case studies for RuleTrace, ReleaseLens and TracePad.
+- `work.html`: project case studies for RuleTrace and ReleaseLens.
 - `about.html`: experience context, technical foundation and current learning areas.
 - `notes.html`: short notes about debugging, validation and investigation.
 - `cv.html`: print-friendly CV summary. Use the browser print dialog to save a PDF.
@@ -17,7 +17,6 @@ The portfolio describes implementations that exist in this branch.
 
 - **RuleTrace** is an ASP.NET Core API that evaluates synthetic expense records and returns a rule-by-rule explanation. It includes an xUnit test project. The API is not deployed. Its browser demo illustrates the trace format separately and does not call the API.
 - **ReleaseLens** is a TypeScript dashboard for filtering a checked-in synthetic build and deployment dataset. It is not connected to a live CI provider.
-- **TracePad** is a browser debugging notebook with local storage and JSON export. Notes stay in the current browser profile.
 
 Screenshots under `assets/projects/` were captured from the local project demos. They use synthetic example data, not production systems.
 
@@ -46,5 +45,7 @@ All project records are synthetic. Do not add employer code, internal product na
 ## Deployment and review
 
 GitHub Pages publishes from the repository root on `main`: https://tumelodev-arch.github.io/
+
+The first release features only the portfolio, RuleTrace and ReleaseLens. TracePad is excluded from the featured project list until it has working code ready for review.
 
 This work remains on `portfolio-readme-review`. Do not merge or publish it until visual testing and explicit approval.
