@@ -1,17 +1,17 @@
 :root {
-  color-scheme: light;
-  --paper: #f4f0e7;
-  --paper-2: #ece7dc;
-  --surface: #fffdf8;
-  --ink: #282a27;
-  --muted: #62665f;
-  --soft-muted: #80837b;
-  --line: #d8d2c5;
-  --line-dark: #bdb5a5;
-  --accent: #286b62;
-  --accent-dark: #174b45;
-  --accent-light: #e0ebe4;
-  --rust: #a65b41;
+  color-scheme: dark;
+  --paper: #0b100d;
+  --paper-2: #101711;
+  --surface: #101711;
+  --ink: #e8f0e9;
+  --muted: #b1c0b5;
+  --soft-muted: #819184;
+  --line: #26362a;
+  --line-dark: #34493a;
+  --accent: #39ff88;
+  --accent-dark: #8cffb8;
+  --accent-light: #14271b;
+  --rust: #39ff88;
   --max-width: 1140px;
   --gutter: 1.2rem;
   --body-font: Inter, "Segoe UI", Arial, Helvetica, sans-serif;
@@ -375,21 +375,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media(prefers-reduced-motion:reduce){.home-tool{transition:none}.home-tool:hover{transform:none}}
 
 /* Portfolio-wide charcoal + neon-green theme for secondary pages. */
-:root {
- color-scheme: dark;
- --paper: #0b100d;
- --paper-2: #101711;
- --surface: #101711;
- --ink: #e8f0e9;
- --muted: #b1c0b5;
- --soft-muted: #819184;
- --line: #26362a;
- --line-dark: #34493a;
- --accent: #39ff88;
- --accent-dark: #8cffb8;
- --accent-light: #14271b;
- --rust: #39ff88;
-}
+
 html, body { background:#0b100d; color:#e8f0e9; }
 ::selection { background:#39ff8840; color:#e8f0e9; }
 a { color:inherit; }
