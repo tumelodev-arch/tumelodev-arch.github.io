@@ -3,7 +3,13 @@ const summary = document.querySelector("#summary");
 const traceList = document.querySelector("#trace-list");
 
 function escapeHtml(value) {
-  return String(value).replace(/[&<>"\']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "\'": "&#39;" })[character]);
+  return String(value).replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[character]);
 }
 
 function check(ruleId, name, passed, explanation) {
