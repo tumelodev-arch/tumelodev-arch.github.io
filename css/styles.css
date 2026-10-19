@@ -118,6 +118,10 @@ h4 { margin-bottom: .4rem; font-size: .96rem; }
 .tech-item small { margin-top: .12rem; color: #737d8d; font-size: .65rem; line-height: 1.35; }
 .tech-mark { display: grid; width: 2.15rem; height: 2.15rem; flex: 0 0 auto; place-items: center; border-radius: .55rem; background: #edf1ff; color: #3557d6; font-size: .7rem; font-weight: 850; letter-spacing: -.04em; }
 .tech-mark svg { width: 1.15rem; height: 1.15rem; }
+.tech-logo-mark { padding: .24rem; border: 1px solid #e6eaf1; background: #fff; }
+.tech-logo-mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.tech-logo-pair { gap: .1rem; padding: .25rem; }
+.tech-logo-pair img { width: 46%; height: 1.45rem; }
 .mark-dotnet { background: #f2edff; color: #6443b8; font-size: .56rem; }
 .mark-angular { background: #fff0f0; color: #c33c4b; font-size: 1.05rem; }
 .mark-typescript { background: #e8f3ff; color: #1c67a3; }
