@@ -14,7 +14,10 @@
 | Repository | Decision | Rationale |
 | --- | --- | --- |
 | `tumelodev-arch` | Keep | Main GitHub profile README; focus on skills and evidence. |
-| `tumelodev-arch.github.io` | Keep and improve | Static portfolio with RuleTrace source/demo and ReleaseLens dashboard. |
+| `tumelodev-arch.github.io` | Keep and improve | Portfolio pages, RuleTrace source/demo, ReleaseLens dashboard and engineering notes. |
+| `Randwise` | Keep | Standalone local-first cash-flow planner with CSV export. |
+| `IncidentAtlas` | Keep | Standalone incident review log with search, lifecycle actions and JSON export. |
+| `DecisionArchive` | Keep | Standalone architecture decision records with Markdown and JSON portability. |
 
 Five public repositories are currently confirmed: the profile README, the portfolio, Randwise, Incident Atlas and Decision Archive. Keep repository boundaries intentional; do not delete, archive, privatise or create repositories merely to optimise appearance.
 
@@ -38,11 +41,14 @@ See `SECURITY_REVIEW_CHECKLIST.md` before release.
 
 ## Pins and descriptions
 
-Pin only projects a reviewer can run or inspect. The portfolio is the strongest existing project pin; avoid empty repos or vanity badges.
+Pin only projects a reviewer can run or inspect. The portfolio is the main landing page. Consider pinning a balanced set of substantive repositories—portfolio, RuleTrace/ReleaseLens source, and the strongest standalone browser apps—rather than pinning every repository automatically.
 
 Recommended descriptions:
 - Profile repo: “Software engineering profile and learning roadmap focused on .NET application development, testing and cloud-native growth.”
 - Portfolio repo: “Personal engineering portfolio featuring a validation API and browser demo, a TypeScript delivery-history dashboard and technical notes.”
+- Randwise: “Local-first ZAR cash-flow planner with transaction editing, monthly summaries and CSV export.”
+- IncidentAtlas: “Local-first incident review workspace with severity tracking, resolution metrics and JSON export.”
+- DecisionArchive: “Local-first architecture decision register with search, Markdown export and validated JSON backup.”
 
 The GitHub bio, website field, pinned repository order and About descriptions are account/repository settings. Update them in the GitHub UI if the connected API does not expose the required write permission.
 
@@ -66,4 +72,4 @@ Three additional independent browser applications have their own source reposito
 - **Incident Atlas** — an incident log with severity, service, impact/response notes, open/resolved state changes, median resolution duration and JSON export.
 - **Decision Archive** — an ADR-style decision register with lifecycle statuses, tags, search/filter, Markdown export and validated JSON backup/restore.
 
-All three run as static browser apps and persist data in local storage. They do not have a server, accounts, cloud sync or third-party service integrations. Do not describe them as cloud-connected or production-operated services. The live links are listed on [the tools hub](https://tumelodev-arch.github.io/lab.html).
+All three run as static browser apps and persist data in local storage. They do not have a server, accounts, cloud sync or third-party service integrations. Do not describe them as cloud-connected or production-operated services. The source links and local setup instructions are listed on [the tools hub](https://tumelodev-arch.github.io/lab.html); the hosted URLs remain pending until Pages deployment succeeds.
