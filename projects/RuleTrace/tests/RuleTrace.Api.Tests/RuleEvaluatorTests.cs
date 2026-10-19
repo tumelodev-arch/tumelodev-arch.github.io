@@ -1,4 +1,5 @@
 using RuleTrace.Api;
+using Xunit;
 
 namespace RuleTrace.Api.Tests;
 
