@@ -11,7 +11,7 @@ if (filterButtons.length && workItems.length && filterStatus) {
     all: "all work examples",
     professional: "professional work",
     learning: "learning exercises",
-    wip: "planned work"
+    wip: "planned concepts"
   };
 
   filterButtons.forEach((button) => {
@@ -36,7 +36,6 @@ if (filterButtons.length && workItems.length && filterStatus) {
     });
   });
 }
-
 
 const printButton = document.querySelector("[data-print-page]");
 if (printButton) {
