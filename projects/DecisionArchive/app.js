@@ -31,6 +31,7 @@
   $("#export-markdown").addEventListener("click",()=>download(visibleMarkdown(),"text/markdown;charset=utf-8","decision-archive.md"));
   $("#export-json").addEventListener("click",()=>download(JSON.stringify({schemaVersion:1,exportedAt:new Date().toISOString(),decisions},null,2),"application/json","decision-archive-backup.json"));
   $("#import-json").addEventListener("change",async e=>{const file=e.target.files?.[0];if(!file)return;try{const payload=JSON.parse(await file.text()),incoming=Array.isArray(payload)?payload:payload.decisions;if(!Array.isArray(incoming)||!incoming.every(valid))throw new Error("This file does not contain valid Decision Archive records.");if(!confirm("Replace the current local records with "+incoming.length+" records from this backup?"))return;decisions=incoming;save();reset();render();$("#form-message").textContent="Backup imported. Local archive updated.";}catch(err){alert(err instanceof Error?err.message:"Could not import this backup file.");}finally{e.target.value="";}});
+  $("#clear-data").addEventListener("click",()=>{if(!confirm("Clear the entire decision archive? This cannot be undone."))return;decisions=[];save();reset();render();$("#form-message").textContent="Archive cleared. Record your first decision when ready.";});
   $("#reset-demo").addEventListener("click",()=>{if(!confirm("Replace local decisions with the three example records?"))return;decisions=starter();save();reset();render();});
   form.elements.date.value=today();load();render();
 })();
