@@ -1,32 +1,79 @@
-# Tumelo Junior Phale Portfolio
+# Tumelo Junior Phale — Portfolio
 
-A multi-page static portfolio built with HTML, CSS, and vanilla JavaScript. No framework, dependencies, or build step.
+A multi-page personal portfolio built with HTML, CSS, and vanilla JavaScript. The site has no framework, package dependencies, or build step.
 
-## Pages
+**Live website:** https://tumelodev-arch.github.io/
 
-- `index.html`: Home
-- `work.html`: Employment and selected technical work
-- `about.html`: Engineering approach, strengths, technical toolkit, and education
-- `contact.html`: Email and profile links
-- `cv.html`: CV page with a direct PDF download and a print option.
-- `assets/tumelo-phale-cv.pdf`: Downloadable one-page CV.
+## Overview
 
-## Assets
+This repository contains my personal portfolio, presenting my background, professional experience, technical interests, and CV.
 
-`assets/tumelo-phale-cv.pdf` is the downloadable CV linked from the CV page.
+The project is intentionally lightweight: the website uses standard browser technologies and can be reviewed without installing a JavaScript framework or running a build pipeline.
 
-## Preview
+## Site Pages
 
-Open `index.html` in a browser or use any local static file server.
+| File | Purpose |
+| --- | --- |
+| `index.html` | Portfolio home page |
+| `work.html` | Employment background and selected technical work |
+| `about.html` | Engineering approach, technical toolkit, strengths, and education |
+| `contact.html` | Contact details and profile links |
+| `cv.html` | CV page with PDF download and print option |
 
-## GitHub Pages
+## CV
 
-The site is published from the repository root on `main`: <https://tumelodev-arch.github.io/>. The site uses relative file links and has no build step.
+The downloadable CV is stored at:
 
-Before changing or adding work-related details, confirm they are allowed by Sage's public disclosure policy.
+`assets/tumelo-phale-cv.pdf`
 
-## Profile and engineering resources
+The CV page links to the PDF and provides a print option. Before publishing changes, check that the PDF is current and that its contents are appropriate for public access.
 
-- [GitHub profile README source](github-profile/README.md)
-- [Profile audit, flagship architectures, AWS evidence map, and 90-day roadmap](docs/github-profile-strategy.md)
-- [Reusable repository standards and .NET/AWS workflow templates](templates/repository-standard/)
+## Run Locally
+
+1. Open or clone this repository.
+2. Open `index.html` in a modern web browser.
+3. Navigate through the site pages and check that links, styles, and assets load correctly.
+
+No package installation or build command is required for the current static-site setup.
+
+## Quality Checklist
+
+Before proposing a portfolio update, manually verify:
+
+- All five pages open and navigation works.
+- Layouts remain readable at desktop and mobile widths.
+- Links to the CV, LinkedIn, GitHub, and other pages work.
+- The PDF downloads and the print option behaves as expected.
+- Images, fonts, stylesheets, and JavaScript load correctly.
+- Keyboard navigation, visible focus, and page headings remain usable.
+- Professional claims, dates, links, and CV details are accurate.
+- No private, confidential, or employer-restricted information has been added.
+
+These are manual review steps, not a claim that an automated test suite is configured.
+
+## Deployment
+
+The site is published using GitHub Pages from the repository root on the `main` branch:
+
+https://tumelodev-arch.github.io/
+
+The current site uses relative file links and has no build step. Changes should be reviewed on a separate branch before they are merged into `main`, because changes to the published branch may affect the live website.
+
+## Related Resources
+
+- [GitHub profile](https://github.com/tumelodev-arch)
+- [Profile README repository](https://github.com/tumelodev-arch/tumelodev-arch)
+- [Portfolio source repository](https://github.com/tumelodev-arch/tumelodev-arch.github.io)
+
+Additional planning documents and templates are available in this repository:
+
+- `docs/github-profile-strategy.md` — profile strategy and project roadmap.
+- `templates/repository-standard/` — reusable repository standards and workflow templates.
+
+Before changing work-related details, confirm they comply with the employer's public-disclosure policy.
+
+## Project Status
+
+This repository is the source for my personal portfolio website. It presents my background and learning direction; it should not be interpreted as evidence that planned cloud or AI projects are already implemented.
+
+I intend to improve the portfolio as I build and document reproducible engineering projects.
