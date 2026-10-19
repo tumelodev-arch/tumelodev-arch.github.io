@@ -7,6 +7,7 @@ A multi-page engineering portfolio with independent case studies, hosted interac
 ## Start here
 
 - [Portfolio](https://tumelodev-arch.github.io/)
+- [Professional experience](https://tumelodev-arch.github.io/experience.html)
 - [Projects and case studies](https://tumelodev-arch.github.io/work.html)
 - [RuleTrace browser demo](https://tumelodev-arch.github.io/projects/RuleTrace/demo.html)
 - [ReleaseLens dashboard](https://tumelodev-arch.github.io/projects/ReleaseLens/index.html)
