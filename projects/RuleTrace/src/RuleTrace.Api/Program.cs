@@ -15,4 +15,4 @@ app.MapPost("/api/validate", (ExpenseRecord record) =>
 
 app.Run();
 
-public partial class Program;
+public partial class Program { }
