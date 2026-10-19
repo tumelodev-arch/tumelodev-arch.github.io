@@ -213,3 +213,115 @@ main p { max-width: 70ch; }
   .resume-section h2 { font-size: 8pt; }
   a { color: #202020; text-decoration: none; }
 }
+
+/* Portfolio refresh: richer colour, depth, and clearer visual hierarchy. */
+:root {
+  color-scheme: dark;
+  --black: #0b1020;
+  --panel: #121b2e;
+  --line: #293852;
+  --white: #f1f5ff;
+  --muted: #aab8cf;
+  --green: #b7f36b;
+  --deep-green: #426c45;
+  --body-font: Inter, "Segoe UI", Arial, Helvetica, sans-serif;
+  --mono-font: "Cascadia Code", Consolas, "Liberation Mono", monospace;
+}
+
+html { background: var(--black); }
+body {
+  background:
+    radial-gradient(ellipse at 78% 0%, rgba(70, 102, 168, 0.14), transparent 34rem),
+    var(--black);
+}
+.site-header {
+  border-bottom-color: rgba(122, 150, 190, 0.22);
+  background: rgba(11, 16, 32, 0.92);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+.wordmark { font-size: 1.35rem; letter-spacing: -0.12em; }
+.primary-nav a { transition: color 160ms ease; }
+.primary-nav .nav-cta {
+  border-color: rgba(183, 243, 107, 0.5);
+  border-radius: 999px;
+  padding-inline: 1rem;
+}
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-image:
+    radial-gradient(circle at 80% 30%, rgba(89, 218, 195, 0.09), transparent 15rem),
+    linear-gradient(rgba(108, 137, 184, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108, 137, 184, 0.055) 1px, transparent 1px);
+  background-size: auto, 34px 34px, 34px 34px;
+  background-position: center, right top, right top;
+}
+.home-hero::after {
+  position: absolute;
+  z-index: -1;
+  top: 12%;
+  right: 13%;
+  width: clamp(9rem, 24vw, 21rem);
+  aspect-ratio: 1;
+  border: 1px solid rgba(183, 243, 107, 0.18);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(183, 243, 107, 0.12), rgba(89, 218, 195, 0.04) 44%, transparent 70%);
+  box-shadow: 0 0 0 2rem rgba(89, 218, 195, 0.025), 0 0 0 4rem rgba(183, 243, 107, 0.018);
+  content: "";
+  pointer-events: none;
+}
+.home-hero h1 { max-width: 12ch; text-wrap: balance; }
+.home-hero h1 span {
+  color: var(--green);
+  text-shadow: 0 0 2.2rem rgba(183, 243, 107, 0.14);
+}
+.eyebrow { font-size: 0.68rem; }
+.status-dot { box-shadow: 0 0 0 4px rgba(183, 243, 107, 0.12), 0 0 1rem rgba(183, 243, 107, 0.5); }
+.button { border-radius: 999px; transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease; }
+.button:hover { transform: translateY(-2px); }
+.button-green { box-shadow: 0 8px 28px rgba(183, 243, 107, 0.12); }
+.hero-facts {
+  gap: 0;
+  padding: 0.45rem 1.25rem;
+  border: 1px solid rgba(122, 150, 190, 0.25);
+  border-left: 2px solid var(--green);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(24, 36, 59, 0.94), rgba(15, 24, 42, 0.88));
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.22);
+}
+.hero-fact { padding-block: 1rem; }
+.hero-fact strong { font-size: 1.02rem; }
+.ruled-section { border-top-color: rgba(122, 150, 190, 0.2); }
+.section-label { letter-spacing: 0.13em; }
+.teaser-card, .challenge-card, .work-role {
+  border-color: rgba(122, 150, 190, 0.25);
+  border-radius: 0.9rem;
+  background: linear-gradient(150deg, rgba(22, 33, 54, 0.98), rgba(15, 23, 40, 0.98));
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+.teaser-card { min-height: 11.5rem; padding: 1.3rem; }
+.teaser-card:hover, .challenge-card:hover {
+  border-color: rgba(183, 243, 107, 0.7);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.18);
+  transform: translateY(-3px);
+}
+.teaser-index { display: inline-flex; width: fit-content; align-items: center; border: 1px solid rgba(183, 243, 107, 0.35); border-radius: 999px; padding: 0.16rem 0.55rem; }
+.tag { border-color: rgba(183, 243, 107, 0.32); border-radius: 999px; background: rgba(183, 243, 107, 0.055); }
+.work-note { border-color: rgba(122, 150, 190, 0.25); }
+.site-footer { border-top-color: rgba(122, 150, 190, 0.22); }
+.page-heading h1 { text-wrap: balance; }
+a { transition: color 160ms ease; }
+a:focus-visible, button:focus-visible { outline-color: var(--green); }
+@media (min-width: 680px) {
+  .home-hero { padding-block: 6rem; }
+}
+@media (max-width: 679px) {
+  .home-hero { background-position: center, right top, right top; }
+  .home-hero::after { top: 4%; right: -2rem; width: 10rem; opacity: 0.7; }
+  .hero-facts { margin-top: 0.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
