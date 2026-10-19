@@ -63,7 +63,7 @@ The committed `app.js` allows the live dashboard to run without a build step.
 
 ## Quality and boundaries
 
-GitHub Actions checks local HTML references, JavaScript syntax, TypeScript compilation and RuleTrace tests. These checks do not replace manual responsive and keyboard-accessibility review.
+GitHub Actions checks local HTML references, JavaScript syntax, TypeScript compilation and RuleTrace tests. A separate Playwright/Chromium workflow exercises transaction create/edit/persistence/export, incident resolve/persistence/export and decision save/persistence/export. These checks do not replace broader manual responsive and keyboard-accessibility review.
 
 All demo records and rule thresholds are synthetic. RuleTrace has no authentication or persistence, its API is not deployed, and ReleaseLens does not consume live CI data. Do not add credentials, employer code, customer data, private screenshots, internal URLs, ticket IDs or proprietary rules.
 
