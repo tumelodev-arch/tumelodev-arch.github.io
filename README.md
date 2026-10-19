@@ -48,4 +48,4 @@ GitHub Pages publishes from the repository root on `main`: https://tumelodev-arc
 
 The first release features only the portfolio, RuleTrace and ReleaseLens. TracePad is excluded from the featured project list until it has working code ready for review.
 
-This work remains on `portfolio-readme-review`. Do not merge or publish it until visual testing and explicit approval.
+The portfolio redesign is published from `main`. The latest deployment workflow should be checked after each change; a successful publish job confirms deployment completion but does not replace desktop, mobile, keyboard or assistive-technology testing.
