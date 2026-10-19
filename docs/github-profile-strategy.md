@@ -16,7 +16,7 @@
 | `tumelodev-arch` | Keep | Main GitHub profile README; focus on skills and evidence. |
 | `tumelodev-arch.github.io` | Keep and improve | Static portfolio with RuleTrace source/demo and ReleaseLens dashboard. |
 
-There are two confirmed public repositories. Do not delete, archive, privatise or create repositories merely to optimise appearance.
+Five public repositories are currently confirmed: the profile README, the portfolio, Randwise, Incident Atlas and Decision Archive. Keep repository boundaries intentional; do not delete, archive, privatise or create repositories merely to optimise appearance.
 
 ## Project boundaries
 
@@ -60,7 +60,7 @@ The published profile README now uses a terminal-inspired header, compact techno
 
 ## New independent tools
 
-Three additional live browser applications are available from the portfolio. These are deliberately named, implemented applications rather than generic roadmap placeholders:
+Three additional independent browser applications have their own source repositories. Their GitHub Pages deployments are not live yet; enable Pages with GitHub Actions in each repository and confirm a successful deployment before calling these demos live:
 
 - **Randwise** — a ZAR cash-flow planner with transaction CRUD, month/type/category filters, savings-rate calculation, spending breakdown and filtered CSV export.
 - **Incident Atlas** — an incident log with severity, service, impact/response notes, open/resolved state changes, median resolution duration and JSON export.
