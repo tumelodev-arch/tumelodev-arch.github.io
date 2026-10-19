@@ -1,71 +1,47 @@
 # Tumelo Phale — Engineering Portfolio
 
-A multi-page engineering portfolio with independent case studies, hosted interactive browser demos and notes on debugging, validation and delivery. The site is static HTML/CSS/JavaScript and publishes through GitHub Pages.
+A static, multi-page engineering portfolio focused on backend development, production investigation, validation, reliability and clear technical writing.
 
 **Live site:** https://tumelodev-arch.github.io/
 
 ## Start here
 
-- [Portfolio](https://tumelodev-arch.github.io/)
+- [Portfolio home](https://tumelodev-arch.github.io/)
 - [Professional experience](https://tumelodev-arch.github.io/experience.html)
-- [Projects and case studies](https://tumelodev-arch.github.io/work.html)
-- [RuleTrace browser demo](https://tumelodev-arch.github.io/projects/RuleTrace/demo.html)
-- [ReleaseLens dashboard](https://tumelodev-arch.github.io/projects/ReleaseLens/index.html)
+- [Selected work and engineering notes](https://tumelodev-arch.github.io/work.html)
+- [Independent browser applications](https://tumelodev-arch.github.io/lab.html)
 - [About](https://tumelodev-arch.github.io/about.html) · [Notes](https://tumelodev-arch.github.io/notes.html) · [CV](https://tumelodev-arch.github.io/cv.html)
-
-## Projects
-
-### RuleTrace
-A .NET 10 minimal API evaluates synthetic expense records and returns six rule-level outcomes with explanations. The source separates HTTP routing from rule evaluation and includes xUnit tests. The hosted browser demo implements the illustrative policy independently; it does **not** call the API.
-
-- API: `projects/RuleTrace/src/RuleTrace.Api/`
-- Tests: `projects/RuleTrace/tests/RuleTrace.Api.Tests/`
-- [Architecture](projects/RuleTrace/ARCHITECTURE.md) · [README](projects/RuleTrace/README.md)
-- **Deployment:** browser demo hosted; API runs locally and is not deployed.
-
-### ReleaseLens
-A TypeScript dashboard for exploring invented build/deployment records. Search and filters drive the derived metrics and run detail; filtered records can be exported to CSV.
-
-- Source: `projects/ReleaseLens/src/app.ts`
-- [README](projects/ReleaseLens/README.md)
-- **Deployment:** interactive static dashboard hosted; no live CI-provider connection.
 
 ## Independent applications
 
-Three working browser applications have their own setup notes and feature boundaries:
+### Randwise — cash-flow planner
+Track income and expenses in South African rand, edit or remove transactions, review monthly totals and category breakdowns, and export filtered transactions to CSV.
 
-- **[Randwise — cash-flow planner](https://tumelodev-arch.github.io/projects/Randwise/)** — add/edit/remove income and expense entries, monthly metrics, category breakdown and filtered CSV export. Uses local browser storage.
-- **[Incident Atlas — incident coordination log](https://tumelodev-arch.github.io/projects/IncidentAtlas/)** — incident severity/state, response notes, resolve/reopen workflow, duration metrics and JSON export. It is not an alerting or monitoring service.
-- **[Decision Archive — architecture decisions](https://tumelodev-arch.github.io/projects/DecisionArchive/)** — searchable decision records, status and tag filters, Markdown export and JSON backup/restore.
+- [Open application](https://tumelodev-arch.github.io/projects/Randwise/)
+- Source: `projects/Randwise/`
 
-These are functional local-first browser applications. Each demo persists in the visitor's browser, uses synthetic starter records, has no account or server, and should not be used for confidential or sensitive data.
+### Incident Atlas — incident review workspace
+Record incident severity, impact and response notes; search and filter the register; resolve or reopen incidents; review duration metrics and export JSON.
+
+- [Open application](https://tumelodev-arch.github.io/projects/IncidentAtlas/)
+- Source: `projects/IncidentAtlas/`
+
+### Decision Archive — architecture decision records
+Capture decision context, rationale, alternatives, consequences, status and tags. Search records, export Markdown, and back up or restore validated JSON.
+
+- [Open application](https://tumelodev-arch.github.io/projects/DecisionArchive/)
+- Source: `projects/DecisionArchive/`
+
+## Data and privacy boundaries
+
+The applications are browser-based demos. They begin with synthetic example records, let visitors clear the data and add their own entries, and save changes in the current browser using local storage. They do not provide accounts, cloud sync, bank connections, live monitoring or shared workspaces. Avoid entering confidential or sensitive information. Export files are saved to the visitor's device.
 
 ## Run locally
 
-Open `index.html` in a browser.
+Open `index.html` in a browser, or serve the repository root using any static file server. The three applications are under `projects/` and can be opened directly.
 
-From the repository root, run RuleTrace:
+## Quality checks
 
-```sh
-dotnet run --project projects/RuleTrace/src/RuleTrace.Api
-dotnet test projects/RuleTrace/tests/RuleTrace.Api.Tests/RuleTrace.Api.Tests.csproj --configuration Release
-```
+GitHub Actions validates site links, JavaScript syntax, TypeScript compilation and automated application flows. CI checks are useful evidence, but they do not replace manual responsive, keyboard-accessibility and cross-browser review.
 
-The API defaults to `http://localhost:5080`; its health endpoint is `/health`.
-
-Rebuild ReleaseLens with TypeScript 5.8+ installed:
-
-```sh
-cd projects/ReleaseLens
-tsc -p tsconfig.json
-```
-
-The committed `app.js` allows the live dashboard to run without a build step.
-
-## Quality and boundaries
-
-GitHub Actions checks local HTML references, JavaScript syntax, TypeScript compilation and RuleTrace tests. A separate Playwright/Chromium workflow exercises transaction create/edit/persistence/export, incident resolve/persistence/export and decision save/persistence/export. These checks do not replace broader manual responsive and keyboard-accessibility review.
-
-All demo records and rule thresholds are synthetic. RuleTrace has no authentication or persistence, its API is not deployed, and ReleaseLens does not consume live CI data. Do not add credentials, employer code, customer data, private screenshots, internal URLs, ticket IDs or proprietary rules.
-
-Technology names and marks belong to their respective owners; use does not imply endorsement.
+All example data is synthetic. Portfolio descriptions distinguish independent demos from professional experience and do not expose employer code, customer records, internal URLs, ticket IDs or proprietary rules.
