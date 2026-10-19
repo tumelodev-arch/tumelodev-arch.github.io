@@ -559,3 +559,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 /* Hosted demos remain clearly marked until Pages is enabled. */
 .deployment-note { margin:1rem 0; padding:.85rem 1rem; border:1px solid #34493a; border-left:2px solid #39ff88; background:#101711; color:#b1c0b5; font-size:.8rem; line-height:1.6; }
 .deployment-note strong { color:#39ff88; }
+
+.footer-brand { color:#e8f0e9; text-decoration:none; }
+.footer-brand .brand-mark { color:#39ff88; }
