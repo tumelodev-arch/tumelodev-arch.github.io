@@ -49,3 +49,11 @@ The GitHub bio, website field, pinned repository order and About descriptions ar
 ## Quality workflow
 
 The portfolio quality workflow checks local HTML references, JavaScript syntax, TypeScript compilation and RuleTrace tests. A green job confirms those automated checks only; manually review responsive layout, keyboard navigation and live-demo behaviour.
+
+## Terminal-style profile presentation
+
+The published profile README now uses a terminal-inspired header, compact technology icons, command-prompt sections for skills and project links, public GitHub statistics, an activity graph and a generated 3D/isometric contribution calendar. The profile repo contains the banner SVG and a scheduled GitHub Actions workflow for refreshing the calendar. The generator action is pinned to a specific commit and uses the repository-scoped `GITHUB_TOKEN`; it commits only generated calendar SVGs.
+
+- [Published profile README](https://github.com/tumelodev-arch/tumelodev-arch)
+- [Profile contribution-calendar workflow](https://github.com/tumelodev-arch/tumelodev-arch/blob/main/.github/workflows/profile-3d.yml)
+- [Terminal banner source](https://github.com/tumelodev-arch/tumelodev-arch/blob/main/assets/profile-terminal.svg)
