@@ -1,31 +1,37 @@
 # RuleTrace
 
-RuleTrace is a small ASP.NET Core API that applies a deliberately small set of validation rules to a synthetic expense record and returns an explanation for each rule.
+RuleTrace is a focused ASP.NET Core minimal API that evaluates a synthetic expense record and returns a trace for each rule. It demonstrates validation decisions that can be inspected, tested and explained.
 
-## Scope
+**Status:** the browser demo is hosted; the .NET API runs locally and is not deployed. The browser demo does not call the API.
 
-- Uses synthetic expense records only.
-- Returns a stable rule identifier, pass/fail result, and a plain-language explanation.
-- Separates the rule evaluation from the HTTP endpoint.
-- Includes unit tests for valid and invalid cases.
+## Behaviour
+
+| Rule | Behaviour |
+| --- | --- |
+| RT-001 | Amount must be greater than zero |
+| RT-002 | Amount must not exceed the sample limit of 10,000 |
+| RT-003 | Category must be recognised |
+| RT-004 | Currency must be ZAR, GBP or USD |
+| RT-005 | Receipt required for amounts of 250 or more |
+| RT-006 | Submission date must be present |
+
+The sample categories, currencies and thresholds are invented for this demo, not copied from any real employer or business policy.
 
 ## Run locally
 
-Requires the .NET 10 SDK.
+Requires the .NET 10 SDK. From the repository root:
 
 ```sh
-dotnet run --project src/RuleTrace.Api
+dotnet run --project projects/RuleTrace/src/RuleTrace.Api
 ```
 
-By default, the API listens at `http://localhost:5080`.
-
-Health check:
+The default URL is `http://localhost:5080`.
 
 ```sh
 curl http://localhost:5080/health
 ```
 
-Evaluate a synthetic record:
+Example validation request:
 
 ```sh
 curl -X POST http://localhost:5080/api/validate \
@@ -40,23 +46,23 @@ curl -X POST http://localhost:5080/api/validate \
   }'
 ```
 
-Run tests:
+Run tests from the repository root:
 
 ```sh
-dotnet test tests/RuleTrace.Api.Tests/RuleTrace.Api.Tests.csproj
+dotnet test projects/RuleTrace/tests/RuleTrace.Api.Tests/RuleTrace.Api.Tests.csproj --configuration Release
 ```
 
-## Example rules
+## Structure
 
-- Amount is positive.
-- Amount is within the sample limit.
-- Category is supplied.
-- Currency is one of the sample supported values.
-- Receipts are required at or above the sample threshold.
-- The submitted date is present.
+- `src/RuleTrace.Api/Program.cs` — startup, URL configuration and HTTP routes.
+- `src/RuleTrace.Api/ExpenseRecord.cs` — request contract.
+- `src/RuleTrace.Api/RuleEvaluator.cs` — deterministic validation rules.
+- `src/RuleTrace.Api/RuleCheck.cs` — trace response types.
+- `tests/RuleTrace.Api.Tests/RuleEvaluatorTests.cs` — representative valid/invalid cases.
+- `demo.html` and `demo.js` — independent browser example.
 
-These are invented rules for demonstrating an implementation pattern. They do not represent a real finance or employer policy.
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the request flow and design boundaries.
 
-## Limitation
+## Decisions and limits
 
-The API has not been deployed. The separate `demo.html` page is a browser-side illustration of the trace format and does not call the API. There is no authentication, persistence or external rules store.
+The evaluator is separate from HTTP routing so it can be tested without starting a server. Each outcome uses a stable rule ID and explanation. There is no authentication, persistence, external rules store, rate limiting or production deployment. Endpoint-level request validation and error handling should be expanded before real service use.

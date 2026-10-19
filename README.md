@@ -1,51 +1,60 @@
-# Tumelo Phale | Personal Engineering Notebook
+# Tumelo Phale — Engineering Portfolio
 
-A small, multi-page portfolio built with semantic HTML, modern CSS and vanilla JavaScript. The site runs on GitHub Pages without a framework or a build step.
+A multi-page engineering portfolio with independent case studies, hosted interactive browser demos and notes on debugging, validation and delivery. The site is static HTML/CSS/JavaScript and publishes through GitHub Pages.
 
-## Pages
+**Live site:** https://tumelodev-arch.github.io/
 
-- `index.html`: short introduction, two featured implementations, technical foundation and a recent engineering note.
-- `work.html`: project case studies for RuleTrace and ReleaseLens.
-- `about.html`: experience context, technical foundation and current learning areas.
-- `notes.html`: short notes about debugging, validation and investigation.
-- `cv.html`: print-friendly CV summary. Use the browser print dialog to save a PDF.
-- `contact.html`: contact and public profile links.
+## Start here
+
+- [Portfolio](https://tumelodev-arch.github.io/)
+- [Projects and case studies](https://tumelodev-arch.github.io/work.html)
+- [RuleTrace browser demo](https://tumelodev-arch.github.io/projects/RuleTrace/demo.html)
+- [ReleaseLens dashboard](https://tumelodev-arch.github.io/projects/ReleaseLens/index.html)
+- [About](https://tumelodev-arch.github.io/about.html) · [Notes](https://tumelodev-arch.github.io/notes.html) · [CV](https://tumelodev-arch.github.io/cv.html)
 
 ## Projects
 
-The portfolio describes implementations that exist in this branch.
+### RuleTrace
+A .NET 10 minimal API evaluates synthetic expense records and returns six rule-level outcomes with explanations. The source separates HTTP routing from rule evaluation and includes xUnit tests. The hosted browser demo implements the illustrative policy independently; it does **not** call the API.
 
-- **RuleTrace** is an ASP.NET Core API that evaluates synthetic expense records and returns a rule-by-rule explanation. It includes an xUnit test project. The API is not deployed. Its browser demo illustrates the trace format separately and does not call the API.
-- **ReleaseLens** is a TypeScript dashboard for filtering a checked-in synthetic build and deployment dataset. It is not connected to a live CI provider.
+- API: `projects/RuleTrace/src/RuleTrace.Api/`
+- Tests: `projects/RuleTrace/tests/RuleTrace.Api.Tests/`
+- [Architecture](projects/RuleTrace/ARCHITECTURE.md) · [README](projects/RuleTrace/README.md)
+- **Deployment:** browser demo hosted; API runs locally and is not deployed.
 
-Screenshots under `assets/projects/` were captured from the local project demos. They use synthetic example data, not production systems.
+### ReleaseLens
+A TypeScript dashboard for exploring invented build/deployment records. Search and filters drive the derived metrics and run detail; filtered records can be exported to CSV.
+
+- Source: `projects/ReleaseLens/src/app.ts`
+- [README](projects/ReleaseLens/README.md)
+- **Deployment:** interactive static dashboard hosted; no live CI-provider connection.
 
 ## Run locally
 
-Open `index.html` in a browser to inspect the site and browser demos.
+Open `index.html` in a browser.
 
-RuleTrace API:
-1. Install the .NET 10 SDK.
-2. From the repository root, run `dotnet run --project projects/RuleTrace/src/RuleTrace.Api`.
-3. Open `http://localhost:5080/health` or POST a sample record to `/api/validate`.
-4. Run tests with `dotnet test projects/RuleTrace/tests/RuleTrace.Api.Tests/RuleTrace.Api.Tests.csproj`.
+From the repository root, run RuleTrace:
 
-ReleaseLens has a compiled browser script committed in `projects/ReleaseLens/app.js`. If TypeScript is installed, rebuild it from `projects/ReleaseLens/` with `tsc -p tsconfig.json`.
+```sh
+dotnet run --project projects/RuleTrace/src/RuleTrace.Api
+dotnet test projects/RuleTrace/tests/RuleTrace.Api.Tests/RuleTrace.Api.Tests.csproj --configuration Release
+```
 
-## Accessibility and maintenance
+The API defaults to `http://localhost:5080`; its health endpoint is `/health`.
 
-The main site has semantic page structure, skip links, visible keyboard focus, responsive layouts and reduced-motion support. The demos use native controls and do not need external scripts. Check desktop and mobile widths before publishing.
+Rebuild ReleaseLens with TypeScript 5.8+ installed:
 
-## Copyright and public sharing
+```sh
+cd projects/ReleaseLens
+tsc -p tsconfig.json
+```
 
-Original site copy and layout are maintained by Tumelo Phale. Third-party technology icons and their licensing information are kept under `assets/icons/`. Technology names and marks belong to their respective owners. Their use is descriptive and does not imply endorsement.
+The committed `app.js` allows the live dashboard to run without a build step.
 
-All project records are synthetic. Do not add employer code, internal product names, customer data, private documentation, internal screenshots, URLs, ticket numbers or proprietary rules.
+## Quality and boundaries
 
-## Deployment and review
+GitHub Actions checks local HTML references, JavaScript syntax, TypeScript compilation and RuleTrace tests. These checks do not replace manual responsive and keyboard-accessibility review.
 
-GitHub Pages publishes from the repository root on `main`: https://tumelodev-arch.github.io/
+All demo records and rule thresholds are synthetic. RuleTrace has no authentication or persistence, its API is not deployed, and ReleaseLens does not consume live CI data. Do not add credentials, employer code, customer data, private screenshots, internal URLs, ticket IDs or proprietary rules.
 
-The first release features only the portfolio, RuleTrace and ReleaseLens. TracePad is excluded from the featured project list until it has working code ready for review.
-
-The portfolio redesign is published from `main`. The latest deployment workflow should be checked after each change; a successful publish job confirms deployment completion but does not replace desktop, mobile, keyboard or assistive-technology testing.
+Technology names and marks belong to their respective owners; use does not imply endorsement.

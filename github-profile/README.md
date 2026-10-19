@@ -1,58 +1,44 @@
-# Tumelo Junior Phale
+# Tumelo Phale
 
-**Graduate Software Engineer at Sage | C#/.NET | Cloud-Native Systems | AI & Platform Engineering**
+Software engineer working mainly with **.NET and TypeScript**, focused on application behaviour, validation, testing and reliable delivery. I use this profile to share independent work, engineering notes and verifiable evidence of what I build.
 
-Johannesburg, South Africa · [Email](mailto:tumelojuniorphale@gmail.com) · [LinkedIn](https://www.linkedin.com/in/tumelo-junior-phale-a6579527b/)
+Johannesburg, South Africa · [Portfolio](https://tumelodev-arch.github.io/) · [LinkedIn](https://www.linkedin.com/in/tumelo-junior-phale-a6579527b/) · [Repositories](https://github.com/tumelodev-arch?tab=repositories)
 
-## About Me
+## Selected work
 
-I build and test product features for a multi-country payroll platform at Sage. My day-to-day work includes C#/.NET and Angular/TypeScript changes, test automation, pull-request workflows, and verifying changes in delivery pipelines. I hold a BSc in Information Technology from North-West University.
+### [RuleTrace — explainable validation](https://tumelodev-arch.github.io/projects/RuleTrace/demo.html)
+A small ASP.NET Core API that evaluates synthetic records and returns a rule-by-rule trace. The hosted browser demo runs the illustrative policy in the browser; the API itself is not deployed.
 
-I am early in my career and use this profile to show what I have built, what I am learning, and how I validate the work. My direction is cloud-native software engineering, with deeper capability in distributed systems, AWS, AI engineering, and platform engineering.
+**Focus:** clear rule identifiers, explicit outcomes, focused tests and useful failure explanations.
 
-## Technical Focus
+[Source and local setup](https://github.com/tumelodev-arch/tumelodev-arch.github.io/tree/main/projects/RuleTrace) · [Architecture](https://github.com/tumelodev-arch/tumelodev-arch.github.io/blob/main/projects/RuleTrace/ARCHITECTURE.md)
 
-- **Product engineering:** C#/.NET, REST APIs, CQRS boundaries, Angular, TypeScript, SQL
-- **Quality and delivery:** unit and end-to-end testing, Cypress, Vitest, Azure DevOps Pipelines, pull-request validation
-- **Cloud foundations:** AWS architecture and hands-on learning in ECS, Fargate, EC2, and load balancing
-- **Systems:** distributed-system fundamentals, reliability, observability, infrastructure automation
-- **AI engineering:** role-based agent design, tool boundaries, orchestration, and evaluation as areas of active development
+### [ReleaseLens — delivery history dashboard](https://tumelodev-arch.github.io/projects/ReleaseLens/index.html)
+An interactive TypeScript dashboard for searching synthetic build records, filtering outcomes, inspecting runs and exporting visible results to CSV.
 
-## Current Projects
+**Focus:** derived metrics, meaningful filters, clear data presentation and client-side export.
 
-- [Live portfolio](https://tumelodev-arch.github.io/) · [source repository](https://github.com/tumelodev-arch/tumelodev-arch.github.io) — a lightweight static site for my experience, work, and CV.
-- **CloudOps AI Assistant** — planned: an auditable assistant for cloud-operations workflows. I will publish it when there is a working implementation and reproducible evidence.
-- **SentinelOps Monitoring Platform** — planned: an observability-focused service demonstrating telemetry, alerting, and operational runbooks.
-- **AgentForge** — planned: a constrained multi-agent engineering workflow with human approval and evaluation.
+[Source and setup](https://github.com/tumelodev-arch/tumelodev-arch.github.io/tree/main/projects/ReleaseLens)
 
-The three flagship projects are roadmap items, not claims of completed or production experience.
+### [Engineering portfolio](https://tumelodev-arch.github.io/)
+A lightweight multi-page site with case studies, technical notes and a print-friendly CV. Built with semantic HTML, CSS and vanilla JavaScript.
 
-## Tech Stack
+## Technical foundation
 
-| Used in current work | Learning and building toward |
-| --- | --- |
-| C#, .NET, Angular, TypeScript, SQL | AWS, Terraform, Docker, Kubernetes fundamentals |
-| Cypress, Vitest, Azure DevOps, Git | OpenTelemetry, distributed systems, platform engineering |
-| REST APIs, CQRS, localization | LLM tool use, RAG, agent evaluation |
+- **Application development:** C#, .NET, ASP.NET Core, Angular, TypeScript, JavaScript, SQL and REST APIs.
+- **Quality and delivery:** validation, unit-test practices, negative testing, regression testing, pull requests, CI troubleshooting and defect investigation.
+- **Developing:** AWS foundations, service observability, reliability engineering, secure delivery and responsible AI-assisted engineering.
 
-## Cloud Experience
+## Engineering approach
 
-My professional delivery experience includes Azure DevOps pipelines and pull-request validation. My AWS experience is currently learning-focused: I have worked through scenarios involving ECS task sizing, Fargate behind a load balancer, and EC2 launch-template updates. I am building toward independently deployable, observable AWS examples; I do not present this learning as production AWS ownership.
+1. Reproduce behaviour before changing the implementation.
+2. Separate observed facts from assumptions.
+3. Keep rules explicit and test normal, invalid and failure cases.
+4. Prefer evidence and useful explanations over unexplained status indicators.
+5. Document limitations rather than presenting a prototype as production-ready.
 
-## AI Experience
+I use AI as a reviewer and learning aid while independently checking code, tests and engineering decisions. My current direction is stronger end-to-end service ownership: design, implementation, validation, delivery and operation.
 
-I have explored role-based agent design by defining coordinator and specialist responsibilities and limiting tool access. My next step is to turn those concepts into a tested application with explicit human approval, traceable runs, evaluation data, and safe failure behavior—not another chat UI.
+## Contact
 
-## Featured Projects
-
-Public, finished project work is still growing. The portfolio repository is currently the main implementation to review. I will feature the flagships here only after each has working code, tests, architecture documentation, a reproducible deployment, and a clear statement of limitations.
-
-## Career Vision
-
-Become a dependable cloud-native software engineer who can take a service from problem definition through implementation, testing, deployment, and operation—and apply AI where it measurably improves engineering work.
-
-## Contact Information
-
-- Email: [tumelojuniorphale@gmail.com](mailto:tumelojuniorphale@gmail.com)
-- LinkedIn: [Tumelo Junior Phale](https://www.linkedin.com/in/tumelo-junior-phale-a6579527b/)
-- GitHub: [@tumelodev-arch](https://github.com/tumelodev-arch)
+[LinkedIn](https://www.linkedin.com/in/tumelo-junior-phale-a6579527b/) · [Portfolio](https://tumelodev-arch.github.io/)

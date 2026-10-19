@@ -34,6 +34,8 @@ const failedMetric = document.querySelector<HTMLElement>("#metric-failed")!;
 const rateMetric = document.querySelector<HTMLElement>("#metric-rate")!;
 const topCategoryMetric = document.querySelector<HTMLElement>("#metric-top-category")!;
 const breakdown = document.querySelector<HTMLDivElement>("#category-breakdown")!;
+const exportButton = document.querySelector<HTMLButtonElement>("#export-runs")!;
+const exportSummary = document.querySelector<HTMLParagraphElement>("#export-summary")!;
 let selectedId = runs[0].id;
 
 function resultLabel(outcome: Outcome): string {
@@ -84,8 +86,46 @@ function renderDetails(run: Run | undefined): void {
   details.innerHTML = `<p class="detail-kicker">${run.id} / SAMPLE DETAIL</p><h3>${run.branch}</h3><p class="detail-summary">${run.summary}</p><div class="detail-grid"><div><span>Outcome</span><strong>${resultLabel(run.outcome)}</strong></div><div><span>Failure category</span><strong>${category}</strong></div><div><span>Commit</span><strong>${run.commit}</strong></div><div><span>Duration</span><strong>${formatDuration(run.durationSeconds)}</strong></div><div><span>Finished</span><strong>${run.finishedAt}</strong></div><div><span>Data source</span><strong>Synthetic fixture</strong></div></div><p class="detail-kicker">STEPS</p><div class="detail-steps">${run.steps.map((step) => `<div class="detail-step">${step}</div>`).join("")}</div>`;
 }
 
+
+function csvCell(value: string | number | null): string {
+  return '"' + String(value ?? "").replace(/"/g, '""') + '"';
+}
+
+function exportFilteredRuns(): void {
+  const current = filteredRuns();
+  const columns = ["id", "branch", "commit", "outcome", "category", "durationSeconds", "finishedAt", "summary", "steps"];
+  const rows = [
+    columns.map(csvCell).join(","),
+    ...current.map((run) => {
+      const record: Record<string, string | number | null> = {
+        id: run.id,
+        branch: run.branch,
+        commit: run.commit,
+        outcome: run.outcome,
+        category: run.category,
+        durationSeconds: run.durationSeconds,
+        finishedAt: run.finishedAt,
+        summary: run.summary,
+        steps: run.steps.join(" | ")
+      };
+      return columns.map((column) => csvCell(record[column] ?? "")).join(",");
+    })
+  ];
+  const blob = new Blob(["\\uFEFF" + rows.join("\\r\\n")], { type: "text/csv;charset=utf-8" });
+  const objectUrl = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = objectUrl;
+  link.download = "releaselens-filtered-runs.csv";
+  document.body.append(link);
+  link.click();
+  link.remove();
+  window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+}
+
 function render(): void {
   const current = filteredRuns();
+  exportButton.disabled = current.length === 0;
+  exportSummary.textContent = "Exports the " + current.length + " visible synthetic record" + (current.length === 1 ? "" : "s.");
   visibleCount.textContent = `${current.length} record${current.length === 1 ? "" : "s"}`;
   totalMetric.textContent = String(current.length);
   failedMetric.textContent = String(current.filter((run) => run.outcome === "failed").length);
@@ -107,4 +147,5 @@ list.addEventListener("click", (event: MouseEvent) => {
 search.addEventListener("input", render);
 outcomeFilter.addEventListener("change", render);
 categoryFilter.addEventListener("change", render);
+exportButton.addEventListener("click", exportFilteredRuns);
 render();
