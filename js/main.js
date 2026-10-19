@@ -9,7 +9,7 @@ const filterStatus = document.querySelector("[data-filter-status]");
 if (filterButtons.length && workItems.length && filterStatus) {
   const filterLabels = {
     all: "all work examples",
-    professional: "professional work",
+    professional: "professional experience",
     learning: "learning exercises",
     wip: "planned concepts"
   };
