@@ -41,6 +41,7 @@
   ["search","filter-status","filter-severity"].forEach(id=>$("#"+id).addEventListener(id==="search"?"input":"change",renderList));
   $("#cancel-edit").addEventListener("click",resetForm);
   $("#reset-demo").addEventListener("click",()=>{if(!confirm("Replace the current local incident log with the synthetic sample incidents?"))return;records=starter();save();resetForm();render();});
+  $("#clear-data").addEventListener("click",()=>{if(!confirm("Clear the entire incident log? This cannot be undone."))return;records=[];save();resetForm();render();$("#form-message").textContent="Incident log cleared. You can now add your own incident.";});
   $("#export-json").addEventListener("click",()=>{const blob=new Blob([JSON.stringify({exportedAt:new Date().toISOString(),schemaVersion:1,incidents:records},null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="incident-atlas-export.json";a.click();URL.revokeObjectURL(url);});
   form.elements.startedAt.value=localInputValue(new Date());load();render();
 })();
