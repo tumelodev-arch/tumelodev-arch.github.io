@@ -248,7 +248,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .project-limitation { margin: .65rem 0 0; color: #77766c; font-size: .72rem; line-height: 1.45; }
 
 
-/* Portfolio refinement: split editorial opening, dark project surfaces, teal system. */
+/* Portfolio refinement: editorial layout and dark project surfaces. */
 /* Legacy teal palette variables removed; shared charcoal/neon-green tokens are defined at the top. */
 html, body, .site-header { background: var(--paper); }
 .intro-section { padding-block: clamp(2.2rem, 4vw, 3.4rem) 2.2rem; }
