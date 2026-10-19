@@ -26,7 +26,7 @@ I build and document software with a focus on **application behaviour, validatio
 ## `$ cat skills.txt`
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=cs,dotnet,angular,ts,js,py,aws,git,github,azure,postman&perline=6" alt="C sharp, .NET, Angular, TypeScript, JavaScript, Python, SQL, Git, GitHub, Azure and Postman icons">
+  <img src="https://skillicons.dev/icons?i=cs,dotnet,angular,ts,js,html,css,aws,git,github,azure,postman&perline=6" alt="C sharp, .NET, Angular, TypeScript, JavaScript, Python, SQL, Git, GitHub, Azure and Postman icons">
 </p>
 
 ```yaml
