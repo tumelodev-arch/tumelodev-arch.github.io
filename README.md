@@ -60,7 +60,7 @@ This is a manual review checklist, not a claim that an automated browser test su
 
 Original written content and the site-specific design are maintained for this portfolio. Brand and technology names are used descriptively to identify tools and experience. Do not assume that employer material, third-party logos, screenshots, or other assets are free to reproduce: use assets with appropriate rights and keep employer-confidential content private.
 
-The footer uses a dynamic year and a copyright notice for this personal portfolio. This notice does not assert ownership over third-party trademarks or the named technologies.
+The footer uses a dynamic year and a copyright notice for this personal portfolio. This notice does not assert ownership over third-party trademarks or the named technologies.\n\nTechnology marks shown in the stack use locally bundled Devicon SVG assets under the MIT License. The applicable notice is preserved in `assets/icons/LICENSE-Devicon.txt`; technology trademarks remain the property of their respective owners.
 
 ## Deployment and review
 
