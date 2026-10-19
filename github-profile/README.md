@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://tumelodev-arch.github.io/"><img src="https://img.shields.io/badge/Portfolio-live-56d4a2?style=flat-square&labelColor=0d1117" alt="Live portfolio"></a>
-  <a href="https://www.linkedin.com/in/tumelo-junior-phale-a6579527b/"><img src="https://img.shields.io/badge/LinkedIn-connect-f778ba?style=flat-square&labelColor=0d1117" alt="LinkedIn profile"></a>
-  <a href="https://github.com/tumelodev-arch?tab=repositories"><img src="https://img.shields.io/badge/GitHub-repositories-c9d1d9?style=flat-square&labelColor=0d1117" alt="Repositories"></a>
+  <a href="https://tumelodev-arch.github.io/"><img src="https://img.shields.io/badge/Portfolio-live-39ff88?style=flat-square&labelColor=0b100d" alt="Live portfolio"></a>
+  <a href="https://www.linkedin.com/in/tumelo-junior-phale-a6579527b/"><img src="https://img.shields.io/badge/LinkedIn-connect-39ff88?style=flat-square&labelColor=0b100d" alt="LinkedIn profile"></a>
+  <a href="https://github.com/tumelodev-arch?tab=repositories"><img src="https://img.shields.io/badge/GitHub-repositories-e8f0e9?style=flat-square&labelColor=0b100d" alt="Repositories"></a>
 </p>
 
 ## `$ whoami`
@@ -26,7 +26,7 @@ I build and document software with a focus on **application behaviour, validatio
 ## `$ cat skills.txt`
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=cs,dotnet,angular,ts,js,html,css,aws,git,github,azure,postman&perline=6" alt="C sharp, .NET, Angular, TypeScript, JavaScript, Python, SQL, Git, GitHub, Azure and Postman icons">
+  <img src="https://skillicons.dev/icons?i=cs,dotnet,angular,ts,js,html,css,aws,git,github,azure,postman&perline=6" alt="C sharp, .NET, Angular, TypeScript, JavaScript, HTML, CSS, AWS, Git, GitHub, Azure and Postman icons">
 </p>
 
 ```yaml
@@ -70,13 +70,13 @@ currently_building:
 
 ## `$ ./tools --list`
 
-| Tool | Purpose | Live demo |
+| Tool | Purpose | Availability / source |
 | --- | --- | --- |
-| **[Randwise](https://tumelodev-arch.github.io/projects/Randwise/)** | Monthly cash-flow tracking, spending breakdown and filtered CSV export. | [Launch ↗](https://tumelodev-arch.github.io/projects/Randwise/) |
-| **[Incident Atlas](https://tumelodev-arch.github.io/projects/IncidentAtlas/)** | Incident logging, severity/state changes, resolution metrics and JSON export. | [Launch ↗](https://tumelodev-arch.github.io/projects/IncidentAtlas/) |
-| **[Decision Archive](https://tumelodev-arch.github.io/projects/DecisionArchive/)** | Searchable architecture decisions with Markdown export and JSON backup/restore. | [Launch ↗](https://tumelodev-arch.github.io/projects/DecisionArchive/) |
+| **[Randwise](https://github.com/tumelodev-arch/Randwise)** | Monthly cash-flow tracking, spending breakdown and filtered CSV export. | Pages setup pending · [Source ↗](https://github.com/tumelodev-arch/Randwise) |
+| **[Incident Atlas](https://github.com/tumelodev-arch/IncidentAtlas)** | Incident logging, severity/state changes, resolution metrics and JSON export. | Pages setup pending · [Source ↗](https://github.com/tumelodev-arch/IncidentAtlas) |
+| **[Decision Archive](https://github.com/tumelodev-arch/DecisionArchive)** | Searchable architecture decisions with Markdown export and JSON backup/restore. | Pages setup pending · [Source ↗](https://github.com/tumelodev-arch/DecisionArchive) |
 
-Each is a working local-first browser application. Records are stored in your browser and are not synchronised to a server; use synthetic or non-sensitive data only.
+Each is a local-first browser application with source code available now. GitHub Pages deployment is pending activation, so the demos are not linked as live. After Pages is enabled and a deployment succeeds, each repository will host its app. Records stay in the current browser and are not synchronised to a server; use synthetic or non-sensitive data only.
 
 <p align="center">
   <a href="https://tumelodev-arch.github.io/"><strong>Open the portfolio →</strong></a>
@@ -89,18 +89,18 @@ Each is a working local-first browser application. Records are stored in your br
 ## `$ git log --graph --all --format='%C(auto)%h %s'`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tumelodev-arch/tumelodev-arch/main/profile-3d-contrib/profile-night-rainbow.svg" alt="Isometric GitHub contribution calendar generated from public activity" width="100%">
+  <img src="https://raw.githubusercontent.com/tumelodev-arch/tumelodev-arch/main/profile-3d-contrib/profile-night-green.svg" alt="Isometric GitHub contribution calendar generated from public activity" width="100%">
 </p>
 
 ## `$ metrics --user tumelodev-arch`
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=tumelodev-arch&show_icons=true&hide_border=true&theme=transparent&bg_color=0d1117&title_color=56d4a2&text_color=c9d1d9&icon_color=f778ba" alt="GitHub overview statistics">
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tumelodev-arch&layout=compact&hide_border=true&theme=transparent&bg_color=0d1117&title_color=56d4a2&text_color=c9d1d9" alt="Most used languages in public repositories">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=tumelodev-arch&show_icons=true&hide_border=true&theme=transparent&bg_color=0b100d&title_color=39ff88&text_color=e8f0e9&icon_color=39ff88" alt="GitHub overview statistics">
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tumelodev-arch&layout=compact&hide_border=true&theme=transparent&bg_color=0b100d&title_color=39ff88&text_color=e8f0e9" alt="Most used languages in public repositories">
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=tumelodev-arch&bg_color=0d1117&color=c9d1d9&line=56d4a2&point=f778ba&area=true&hide_border=true" alt="GitHub contribution activity graph" width="100%">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=tumelodev-arch&bg_color=0b100d&color=e8f0e9&line=39ff88&point=39ff88&area=true&hide_border=true" alt="GitHub contribution activity graph" width="100%">
 </p>
 
 ## `$ cat ~/.engineering-principles`
