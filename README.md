@@ -1,51 +1,69 @@
-# Tumelo Junior Phale — Portfolio
+# Tumelo Junior Phale — Software Engineering Portfolio
 
-A responsive multi-page portfolio built with HTML, CSS, and vanilla JavaScript. No framework, package dependencies, build step, or Docker required.
+A responsive, multi-page portfolio built with HTML, CSS, and vanilla JavaScript. No framework, dependency installation, build step, or Docker is required.
 
 **Live website:** https://tumelodev-arch.github.io/
 
-## Site pages
+## Portfolio goals
+
+The site positions me as an early-career full-stack application engineer with professional experience across C#/.NET, Angular/TypeScript, validation, testing, defect investigation, and delivery workflows—while clearly labelling cloud, security, and AI topics that remain in development.
+
+It distinguishes:
+- **Professional application:** skills used in product engineering and delivery.
+- **Practical exposure:** guided exercises, workshops, or challenge work.
+- **Currently developing:** areas where I am building independent, reproducible evidence.
+- **Planned concept:** future projects that have not been represented as completed work.
+
+Employer examples are generalized to protect customer and company information. Never add internal code, customer data, confidential business rules, private pipeline details, or proprietary screenshots to the public site.
+
+## Pages
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Compact introduction, selected work, approach, and planned-project preview |
-| `work.html` | Professional experience summary, learning exercises, category filters, and planned concepts |
-| `about.html` | Engineering approach, strengths, technical toolkit, and education |
+| `index.html` | Professional introduction, first-year skill growth, technology stack with icon/monogram tiles, engineering stories, and next steps |
+| `work.html` | Generalized case studies, work filters, cloud/AI/security learning, and planned personal projects |
+| `about.html` | Technical capability map, skill context, engineering approach, growth areas, and education |
 | `contact.html` | Email, GitHub, LinkedIn, and location |
-| `cv.html` | CV summary with original PDF download and print-to-PDF option |
+| `cv.html` | Portfolio CV summary, original PDF download, and print option |
 
-## Design and interactions
+## Interactions and accessibility
 
-The current review design uses a light editorial layout, restrained olive/lime accents, generous whitespace, modular project cards, and a consistent responsive grid. Motion is limited to subtle hover feedback and respects reduced-motion preferences.
-
-The Work page can be filtered by professional experience, learning exercises, and planned concepts. Planned concepts are explicitly labelled and are not represented as completed implementations.
-
-## CV
-
-The original downloadable CV is stored at `assets/tumelo-phale-cv.pdf`. The HTML CV summary can be printed or saved as PDF through the browser. Review the original PDF separately before publishing.
+- Work can be filtered by professional experience, learning, or planned concepts.
+- Filter controls expose `aria-pressed` and update a polite live status message.
+- Pages include a skip link, one primary page heading, semantic sections, visible keyboard focus, and responsive layouts.
+- Motion is limited to small hover transitions and respects reduced-motion settings.
+- The page year is populated from the browser's current date.
+- The CV page supports browser printing. The PDF in `assets/tumelo-phale-cv.pdf` remains a separate file and should be checked whenever CV content changes.
 
 ## Run locally
 
 1. Download or clone the repository.
 2. Open `index.html` in a modern browser.
-3. Visit the other pages and check links, layout, filters, and print behavior.
+3. Navigate through each page and test the Work filters, navigation, CV PDF link, and print behavior.
 
-No dependency installation or build command is needed.
+No package installation or build command is required.
 
-## Review checklist
+## Manual review checklist
 
-- Open all five pages and test navigation.
-- Check desktop and narrow mobile widths.
-- Try each Work filter and verify the result announcement.
-- Confirm CV PDF download and print behavior.
-- Check keyboard focus, skip link, headings, and reduced-motion preferences.
-- Verify professional claims, dates, links, and CV details.
-- Avoid adding confidential or employer-restricted information.
+- Review all five pages at desktop and mobile widths.
+- Check navigation, anchor links, CV download, and print layout.
+- Test each Work filter and confirm the status announcement updates.
+- Use keyboard navigation and check visible focus.
+- Check content accuracy, dates, technology labels, and current links.
+- Ensure no internal or employer-restricted information has been added.
+- Keep professional experience distinct from practical exposure and planned concepts.
+- Before publishing, confirm the HTML CV summary and original PDF are aligned.
 
-This is a manual review checklist, not a claim of automated browser testing.
+This is a manual review checklist, not a claim that an automated browser test suite is configured.
 
-## Deployment
+## Copyright and public sharing
 
-GitHub Pages currently publishes from the repository root on the `main` branch: https://tumelodev-arch.github.io/
+Original written content and the site-specific design are maintained for this portfolio. Brand and technology names are used descriptively to identify tools and experience. Do not assume that employer material, third-party logos, screenshots, or other assets are free to reproduce: use assets with appropriate rights and keep employer-confidential content private.
 
-The `portfolio-readme-review` branch is for review only. Changes must not be merged or published until reviewed and explicitly approved.
+The footer uses a dynamic year and a copyright notice for this personal portfolio. This notice does not assert ownership over third-party trademarks or the named technologies.
+
+## Deployment and review
+
+GitHub Pages publishes from the repository root on `main`: https://tumelodev-arch.github.io/
+
+The `portfolio-readme-review` branch is a review branch only. Do not merge or publish its changes until they have been visually reviewed and explicitly approved.
