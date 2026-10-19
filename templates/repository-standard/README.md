@@ -9,6 +9,8 @@
 
 What problem does this solve, who is it for, and what is deliberately out of scope? Include a short demo link or screenshot when useful.
 
+> **Template-only guidance:** The infrastructure and container examples below are optional. They are not used by the current portfolio or its quality workflows; Docker is not required for the existing projects.
+
 ## Architecture
 
 Describe the components, trust boundaries, data flow, and key design trade-offs. Link to [ARCHITECTURE.md](ARCHITECTURE.md) and include a Mermaid diagram for non-trivial systems.
@@ -31,7 +33,6 @@ Describe the components, trust boundaries, data flow, and key design trade-offs.
 ### Prerequisites
 
 - .NET SDK 10.x
-- Docker
 - <other requirements>
 
 ### Run and test
@@ -40,14 +41,17 @@ Describe the components, trust boundaries, data flow, and key design trade-offs.
 dotnet restore src/App.sln
 dotnet build src/App.sln --configuration Release --no-restore
 dotnet test src/App.sln --configuration Release --no-build
-docker build --tag <project>:local .
 ```
 
 Document configuration variables in a table. Commit only `.env.example` with safe sample values; never commit credentials or real customer data.
 
+## Optional Container Packaging
+
+Only use the provided `Dockerfile` and ECS workflow if a future project explicitly chooses a container-based deployment. They are examples, not prerequisites for local development or for the current portfolio. Do not add a Docker build to normal checks unless that deployment choice is made deliberately.
+
 ## Cloud Deployment
 
-Document AWS account/region prerequisites, IAM permissions, Terraform plan/apply commands, GitHub OIDC setup, environment approvals, expected monthly cost range, smoke tests, rollback, and destroy/cleanup steps. Do not deploy automatically from untrusted pull requests.
+If cloud deployment is selected, document AWS account/region prerequisites, IAM permissions, Terraform plan/apply commands, GitHub OIDC setup, environment approvals, expected monthly cost range, smoke tests, rollback, and destroy/cleanup steps. Do not deploy automatically from untrusted pull requests.
 
 ## Screenshots
 
