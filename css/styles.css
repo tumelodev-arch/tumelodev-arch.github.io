@@ -81,7 +81,8 @@ h1 span, h2 span { color: var(--accent); }
 .project-status { display: inline-flex; width: fit-content; flex: 0 0 auto; padding: .23rem .42rem; border: 1px solid #c7d6ca; background: #edf3ec; color: #2e6650; font-size: .59rem; letter-spacing: .025em; }
 .project-status.status-planned { border-color: #ddd0bd; background: #f5eee3; color: #855739; }
 .project-feature-body > p { max-width: 48rem; margin-bottom: 1rem; color: var(--muted); font-size: .88rem; }
-.project-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .7rem; padding-top: .8rem; border-top: 1px solid #e8e2d7; }
+.project-footer { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: .7rem; padding-top: .8rem; border-top: 1px solid #e8e2d7; }
+.project-card-links { display: flex; flex-wrap: wrap; gap: .45rem 1rem; }
 .tech-inline { color: #72756d; font-family: var(--mono-font); font-size: .62rem; line-height: 1.5; }
 .section-footnote { margin: .9rem 0 0; color: #77796f; font-size: .73rem; }
 .foundation-section { display: grid; gap: 1.6rem; padding-block: clamp(2.7rem, 5vw, 4.5rem); border-bottom: 1px solid var(--line); }
