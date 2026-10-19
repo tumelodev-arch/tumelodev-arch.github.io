@@ -21,22 +21,22 @@ Each interactive browser app now has its own repository, workflow, and end-to-en
 
 Record income and expenses in South African rand, review monthly totals and category breakdowns, and export filtered transactions to CSV.
 
-- [Demo URL](https://tumelodev-arch.github.io/Randwise/)
-- [Source repository](https://github.com/tumelodev-arch/Randwise)
+- **Hosted demo:** pending GitHub Pages activation.
+- [Source repository](https://github.com/tumelodev-arch/Randwise) · [Run locally / setup](https://github.com/tumelodev-arch/Randwise/blob/main/README.md)
 
 ### Incident Atlas — incident review workspace
 
 Record incident severity, impact and response notes, search and filter the register, resolve or reopen incidents, and export JSON.
 
-- [Demo URL](https://tumelodev-arch.github.io/IncidentAtlas/)
-- [Source repository](https://github.com/tumelodev-arch/IncidentAtlas)
+- **Hosted demo:** pending GitHub Pages activation.
+- [Source repository](https://github.com/tumelodev-arch/IncidentAtlas) · [Run locally / setup](https://github.com/tumelodev-arch/IncidentAtlas/blob/main/README.md)
 
 ### Decision Archive — architecture decision records
 
 Capture decision context, rationale, alternatives, consequences, status and tags. Search records, export Markdown, and back up or restore JSON.
 
-- [Demo URL](https://tumelodev-arch.github.io/DecisionArchive/)
-- [Source repository](https://github.com/tumelodev-arch/DecisionArchive)
+- **Hosted demo:** pending GitHub Pages activation.
+- [Source repository](https://github.com/tumelodev-arch/DecisionArchive) · [Run locally / setup](https://github.com/tumelodev-arch/DecisionArchive/blob/main/README.md)
 
 **Initial hosting note:** the app repositories include GitHub Pages deployment workflows. Their Pages source must be enabled as **GitHub Actions** in each repository's Settings → Pages before the demo URLs will go live. Until that first deployment completes, run the app locally by opening its index.html.
 
