@@ -2,6 +2,10 @@ const form = document.querySelector("#record-form");
 const summary = document.querySelector("#summary");
 const traceList = document.querySelector("#trace-list");
 
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"\']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "\'": "&#39;" })[character]);
+}
+
 function check(ruleId, name, passed, explanation) {
   return { ruleId, name, passed, explanation };
 }
@@ -32,7 +36,7 @@ function render() {
     receiptAttached: data.get("receiptAttached") === "on"
   });
   const passedAll = result.failed === 0;
-  summary.innerHTML = `<span class="summary-status ${passedAll ? "pass" : "fail"}">${passedAll ? "All rules passed" : "Review required"} <span class="summary-count">/ ${result.recordId}</span></span><span class="summary-count">${result.passed} passed · ${result.failed} failed</span>`;
+  summary.innerHTML = `<span class="summary-status ${passedAll ? "pass" : "fail"}">${passedAll ? "All rules passed" : "Review required"} <span class="summary-count">/ ${escapeHtml(result.recordId)}</span></span><span class="summary-count">${result.passed} passed · ${result.failed} failed</span>`;
   traceList.innerHTML = result.checks.map((item) => `<article class="trace-item ${item.passed ? "pass" : "fail"}"><span class="trace-symbol" aria-hidden="true">${item.passed ? "✓" : "!"}</span><div><p class="trace-id">${item.ruleId}</p><h3>${item.name}</h3><p>${item.explanation}</p></div></article>`).join("");
 }
 
