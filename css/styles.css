@@ -323,7 +323,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
 /* Independent tool catalogue */
 .tools-page .page-heading{margin-bottom:1.4rem}
 .tools-note{display:flex;align-items:flex-start;gap:.8rem;max-width:980px;margin:0 0 1.4rem;padding:1rem;border:1px solid #cfdbd1;background:#e8efe8}
-.tools-note-mark{display:grid;flex:0 0 auto;width:1.5rem;height:1.5rem;place-items:center;border:1px solid #a1b9a6;border-radius:50%;color:#286b62;font-weight:800}
+.tools-note-mark{display:grid;flex:0 0 auto;width:1.5rem;height:1.5rem;place-items:center;border:1px solid #a1b9a6;border-radius:50%;color:var(--accent);font-weight:800}
 .tools-note p{margin:0;color:#536459;font-size:.82rem}.tools-note strong{color:#282a27}
 .tool-grid{display:grid;grid-template-columns:1fr;gap:1rem;align-items:stretch}
 .tool-card{display:flex;flex-direction:column;min-width:0;border:1px solid var(--line);background:var(--surface);padding:1.15rem}
@@ -430,7 +430,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
  html,body { background:#fff!important; color:#222!important; color-scheme:light; }
  .cv-sheet { background:#fff!important; color:#222!important; border:0; }
  .cv-sheet h1,.cv-sheet h2,.cv-sheet h3,.cv-sheet h4,.cv-sheet p,.cv-sheet li,.cv-sheet strong,.cv-contact a { color:#222!important; }
- .cv-sheet section h3 { color:#286b62!important; border-color:#ded9cf; }
 }
 
 
