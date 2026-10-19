@@ -155,7 +155,7 @@ h3 { margin-bottom: 0.65rem; font-size: 1.2rem; }
 .resume-sheet { width: min(100%, 850px); margin: 1.5rem auto 0; padding: clamp(1.1rem, 4vw, 3rem); border: 1px solid var(--line); background: #fff; color: #20231f; font-size: 0.9rem; line-height: 1.5; }
 .resume-header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 2px solid #8aa34d; }
 .resume-location { margin-bottom: 0.5rem; color: #596b35; font-size: 0.58rem; }
-.resume-header h1 { margin-bottom: 0.2rem; font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: -0.06em; }
+.resume-header h1, .resume-header h2 { margin-bottom: 0.2rem; font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: -0.06em; }
 .resume-title { margin: 0; color: #555; font-size: 1rem; }
 .resume-contact { display: grid; align-content: end; gap: 0.2rem; overflow-wrap: anywhere; font-size: 0.72rem; }
 .resume-contact a { color: #20231f; }
@@ -215,7 +215,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .shell, .resume-sheet { width: 100%; max-width: none; margin: 0; padding: 0; border: 0; }
   .resume-sheet { background: #fff; color: #20231f; font-size: 9pt; }
   .resume-header { padding-bottom: 7pt; }
-  .resume-header h1 { font-size: 25pt; }
+  .resume-header h1, .resume-header h2 { font-size: 25pt; }
   .resume-section { padding-top: 7pt; break-inside: avoid; }
   .resume-section h2 { font-size: 8pt; }
   a { color: #20231f; text-decoration: none; }
