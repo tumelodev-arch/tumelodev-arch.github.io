@@ -29,6 +29,16 @@ A TypeScript dashboard for exploring invented build/deployment records. Search a
 - [README](projects/ReleaseLens/README.md)
 - **Deployment:** interactive static dashboard hosted; no live CI-provider connection.
 
+## Independent applications
+
+Three working browser applications have their own setup notes and feature boundaries:
+
+- **[Randwise — cash-flow planner](https://tumelodev-arch.github.io/projects/Randwise/)** — add/edit/remove income and expense entries, monthly metrics, category breakdown and filtered CSV export. Uses local browser storage.
+- **[Incident Atlas — incident coordination log](https://tumelodev-arch.github.io/projects/IncidentAtlas/)** — incident severity/state, response notes, resolve/reopen workflow, duration metrics and JSON export. It is not an alerting or monitoring service.
+- **[Decision Archive — architecture decisions](https://tumelodev-arch.github.io/projects/DecisionArchive/)** — searchable decision records, status and tag filters, Markdown export and JSON backup/restore.
+
+These are functional local-first browser applications. Each demo persists in the visitor's browser, uses synthetic starter records, has no account or server, and should not be used for confidential or sensitive data.
+
 ## Run locally
 
 Open `index.html` in a browser.
