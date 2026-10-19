@@ -124,9 +124,10 @@
     const data=new FormData(form);
     const item={id:editId||id(),type:String(data.get("type")),date:String(data.get("date")),description:String(data.get("description")).trim(),category:String(data.get("category")),amount:Number(data.get("amount")),note:String(data.get("note")||"").trim()};
     if(!validTransaction(item)){ $("#form-message").textContent="Check the date, category, description and positive amount."; return; }
+    const wasEditing=Boolean(editId);
     if(editId) transactions=transactions.map(t=>t.id===editId?item:t); else transactions.push(item);
     persist(); resetForm(); render();
-    $("#form-message").textContent=editId?"Transaction updated.":"Transaction saved.";
+    $("#form-message").textContent=wasEditing?"Transaction updated.":"Transaction saved.";
   });
   $("#transaction-rows").addEventListener("click",event=>{
     const button=event.target.closest("button"); if(!button)return;
