@@ -148,6 +148,7 @@
     if(!confirm("Replace local entries with the synthetic Randwise starter dataset?"))return;
     transactions=starter(); persist(); resetForm(); render();
   });
+  $("#clear-data").addEventListener("click",()=>{if(!confirm("Clear all Randwise entries? This cannot be undone."))return;transactions=[];persist();resetForm();render();$("#form-message").textContent="All entries cleared. Add your own transaction whenever you are ready.";});
   monthInput.value=String(now.getFullYear())+"-"+String(now.getMonth()+1).padStart(2,"0");
   form.elements.date.value=isoDate(now);
   renderCategoryOptions(); load(); render();
