@@ -68,6 +68,16 @@ currently_building:
   </tr>
 </table>
 
+## `$ ./tools --list`
+
+| Tool | Purpose | Live demo |
+| --- | --- | --- |
+| **[Randwise](https://tumelodev-arch.github.io/projects/Randwise/)** | Monthly cash-flow tracking, spending breakdown and filtered CSV export. | [Launch ↗](https://tumelodev-arch.github.io/projects/Randwise/) |
+| **[Incident Atlas](https://tumelodev-arch.github.io/projects/IncidentAtlas/)** | Incident logging, severity/state changes, resolution metrics and JSON export. | [Launch ↗](https://tumelodev-arch.github.io/projects/IncidentAtlas/) |
+| **[Decision Archive](https://tumelodev-arch.github.io/projects/DecisionArchive/)** | Searchable architecture decisions with Markdown export and JSON backup/restore. | [Launch ↗](https://tumelodev-arch.github.io/projects/DecisionArchive/) |
+
+Each is a working local-first browser application. Records are stored in your browser and are not synchronised to a server; use synthetic or non-sensitive data only.
+
 <p align="center">
   <a href="https://tumelodev-arch.github.io/"><strong>Open the portfolio →</strong></a>
   &nbsp;·&nbsp;

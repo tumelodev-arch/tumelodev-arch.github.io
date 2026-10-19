@@ -47,3 +47,15 @@ Aim for three focused sessions per week and roughly 3–5 hours total. Keep one 
 ## Safety boundaries
 
 Do not delete repositories, rewrite Git history, or change visibility under this plan. If a real secret is found in history, revoke it and follow the relevant incident process before cleanup.
+
+## Additional projects implemented
+
+Three working applications have been added under `projects/` and published through the existing GitHub Pages site:
+
+| Project | Live URL | Core workflow | Boundary |
+| --- | --- | --- | --- |
+| Randwise | https://tumelodev-arch.github.io/projects/Randwise/ | Income/expense records, monthly metrics, spending categories and CSV export | Local browser storage; no bank or financial service integration |
+| Incident Atlas | https://tumelodev-arch.github.io/projects/IncidentAtlas/ | Incident intake, severity/state, mitigation notes, resolution metrics and JSON export | Incident log only; no monitoring, paging or alert delivery |
+| Decision Archive | https://tumelodev-arch.github.io/projects/DecisionArchive/ | Decision records, statuses, tags, search, Markdown export and JSON backup/restore | Local archive; no shared team account or cloud sync |
+
+Each app includes a standalone README. Use synthetic starter records when demoing. Data entered into a public demo is stored in the current browser, not the repository; do not use confidential or sensitive information. Static CI checks confirm internal links, JavaScript syntax and existing RuleTrace/ReleaseLens quality checks, but they do not replace manual end-to-end testing of every browser interaction.

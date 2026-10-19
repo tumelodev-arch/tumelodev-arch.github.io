@@ -57,3 +57,13 @@ The published profile README now uses a terminal-inspired header, compact techno
 - [Published profile README](https://github.com/tumelodev-arch/tumelodev-arch)
 - [Profile contribution-calendar workflow](https://github.com/tumelodev-arch/tumelodev-arch/blob/main/.github/workflows/profile-3d.yml)
 - [Terminal banner source](https://github.com/tumelodev-arch/tumelodev-arch/blob/main/assets/profile-terminal.svg)
+
+## New independent tools
+
+Three additional live browser applications are available from the portfolio. These are deliberately named, implemented applications rather than generic roadmap placeholders:
+
+- **Randwise** — a ZAR cash-flow planner with transaction CRUD, month/type/category filters, savings-rate calculation, spending breakdown and filtered CSV export.
+- **Incident Atlas** — an incident log with severity, service, impact/response notes, open/resolved state changes, median resolution duration and JSON export.
+- **Decision Archive** — an ADR-style decision register with lifecycle statuses, tags, search/filter, Markdown export and validated JSON backup/restore.
+
+All three run as static browser apps and persist data in local storage. They do not have a server, accounts, cloud sync or third-party service integrations. Do not describe them as cloud-connected or production-operated services. The live links are listed on [the tools hub](https://tumelodev-arch.github.io/lab.html).
