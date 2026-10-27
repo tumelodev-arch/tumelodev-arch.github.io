@@ -1,58 +1,30 @@
-# Tumelo Phale | Engineering Portfolio
+# Tumelo Phale | Engineering Test Report
 
-The public portfolio of a software engineer with professional experience across C#/.NET backends and Angular/TypeScript frontends, developing deeper capability in cloud, application security and service reliability.
+A static portfolio about the way I investigate bugs, test changes and explain the evidence behind a fix.
 
-**Live portfolio:** https://tumelodev-arch.github.io/
+**Live site:** https://tumelodev-arch.github.io/
 
-## Start here
+## Run locally
 
-- [Home and selected work](https://tumelodev-arch.github.io/)
-- [Projects and engineering boundaries](https://tumelodev-arch.github.io/work.html)
-- [About and technical foundation](https://tumelodev-arch.github.io/about.html)
-- [Professional experience](https://tumelodev-arch.github.io/experience.html)
-- [Engineering notes](https://tumelodev-arch.github.io/notes.html)
-- [CV](https://tumelodev-arch.github.io/cv.html)
+Open `index.html` in a browser. The site uses plain HTML, CSS and vanilla JavaScript. It has no build step, server, external script, tracking or API calls.
 
-## Independent browser applications
+## Design and behaviour
 
-Each project has its own source repository. GitHub Pages deployment workflows for all three applications have reported success.
+- Warm paper and ink palette with a restrained vermilion accent.
+- Responsive left rail that becomes a mobile navigation bar.
+- Light/dark theme toggle, with a system-preference default.
+- Optional command console, case-file expansion, skills filters and original bug examples.
+- Content remains readable without JavaScript. Interactive enhancements are progressively added.
+- The ticket-reader prompt is a clearly labelled placeholder until Tumelo supplies the real sanitised prompt.
 
-### Randwise
+## Checks
 
-A local-first cash-flow planner with editable income and expense records, monthly summaries, category breakdowns and filtered CSV export.
+The GitHub Actions workflow checks JavaScript syntax, source size, required accessible landmarks and basic internal links. These checks do not replace manual keyboard, mobile, contrast or hosted-browser testing.
 
-- **Demo:** https://tumelodev-arch.github.io/Randwise/
-- **Source and setup:** https://github.com/tumelodev-arch/Randwise
+## Public boundaries
 
-### Incident Atlas
+The site does not include employer source code, internal product names, customer data, ticket identifiers or private screenshots. The three project entries are marked in progress until their own repositories and demos exist.
 
-A local incident review log with severity and state filters, impact and response notes, resolution metrics and JSON export. It is not a monitoring, paging or on-call platform.
+## Licence
 
-- **Demo:** https://tumelodev-arch.github.io/IncidentAtlas/
-- **Source and setup:** https://github.com/tumelodev-arch/IncidentAtlas
-
-### Decision Archive
-
-A local-first Architecture Decision Record workspace with search, tags, lifecycle status, Markdown export and validated JSON backup/restore.
-
-- **Demo:** https://tumelodev-arch.github.io/DecisionArchive/
-- **Source and setup:** https://github.com/tumelodev-arch/DecisionArchive
-
-All three apps store records in the current browser. They do not provide user accounts, a backend service, cloud sync or shared storage. Use synthetic or non-sensitive information. Deployment checks are not a substitute for manual browser, mobile and accessibility testing.
-
-## Additional examples
-
-- **RuleTrace:** a .NET validation API and separate browser example using synthetic records. The API is for local development and is not presented as a hosted service.
-- **ReleaseLens:** a TypeScript dashboard using invented build history. It does not connect to a live CI provider.
-- **Engineering notes:** short reflections on debugging, validation and hypothesis testing.
-
-## Engineering standards
-
-- Keep public examples independently written and use synthetic data.
-- Explain setup, implemented behaviour, tests, security boundaries and limitations.
-- Prefer small changes with working quality checks over superficial activity.
-- Do not publish employer source code, customer data, internal identifiers, private screenshots, internal URLs, secrets or proprietary business rules.
-
-## Quality checks
-
-The portfolio workflow checks local HTML references, JavaScript syntax, TypeScript compilation and the existing RuleTrace test suite. Automated checks do not replace a manual review of responsive layout, keyboard use, colour contrast and hosted behaviour.
+MIT. See [LICENSE](LICENSE).

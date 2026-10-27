@@ -1,46 +1,22 @@
 name: Portfolio quality
-
 on:
   push:
-    branches: [main]
+    branches: [main, test-run-portfolio-rebuild]
   pull_request:
     branches: [main]
-  workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
-  static:
-    name: Static site and TypeScript
+  quality:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out source
-        uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "22"
-      - name: Validate internal HTML references
-        run: node scripts/validate-static-site.mjs
-      - name: Parse JavaScript files
-        shell: bash
-        run: |
-          while IFS= read -r -d '' file; do
-            node --check "$file"
-          done < <(find . -type f -name '*.js' -not -path './.git/*' -print0)
-      - name: Type-check ReleaseLens
-        run: npx --yes --package typescript@5.8.3 tsc -p projects/ReleaseLens/tsconfig.json --noEmit
-
-  dotnet:
-    name: RuleTrace tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out source
-        uses: actions/checkout@v4
-      - name: Set up .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: "10.0.x"
-      - name: Run RuleTrace tests
-        run: dotnet test projects/RuleTrace/tests/RuleTrace.Api.Tests/RuleTrace.Api.Tests.csproj --configuration Release --nologo
+          node-version: 22
+      - name: Check JavaScript syntax
+        run: node --check js/main.js
+      - name: Run static checks
+        run: node --test tests/site.test.mjs
+      - name: Check source budget
+        run: node scripts/check-size.mjs
