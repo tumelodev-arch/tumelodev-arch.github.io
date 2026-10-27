@@ -3,190 +3,158 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#14251f">
+  <meta name="theme-color" content="#f4f0e7">
   <meta name="description" content="Tumelo Phale is a software engineer with experience across C#/.NET backends and Angular/TypeScript frontends, developing deeper practice in cloud, security and reliability.">
-  <meta property="og:title" content="Tumelo Phale | Software Engineer">
-  <meta property="og:description" content="Application engineering, careful testing, and dependable systems.">
+  <meta property="og:title" content="Tumelo Phale | Engineering field notes">
+  <meta property="og:description" content="Software engineering, documented through working examples, decisions and lessons.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tumelodev-arch.github.io/">
   <link rel="canonical" href="https://tumelodev-arch.github.io/">
-  <title>Tumelo Phale | Software Engineer</title>
+  <title>Tumelo Phale | Engineering field notes</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/reference-home.css">
   <script src="js/main.js" defer></script>
 </head>
-<body class="reference-home">
+<body class="page-home">
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header reference-header">
-    <a class="brand" href="index.html" aria-label="Tumelo Phale, home"><span class="brand-name">TUMELO PHALE<span class="brand-mark">.</span></span></a>
-    <nav aria-label="Main navigation">
-      <a href="index.html" aria-current="page">Home</a>
+  <header class="masthead">
+    <a class="signature" href="index.html" aria-label="Tumelo Phale home"><span class="signature-mark">TP</span><span class="signature-text">ENGINEERING<br>FIELD NOTES</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Overview</a>
       <a href="work.html">Projects</a>
       <a href="about.html">About</a>
       <a href="notes.html">Notes</a>
       <a href="cv.html">CV</a>
-      <a class="nav-contact" href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-contact">Contact <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">SOFTWARE ENGINEER <span aria-hidden="true">/</span> SOUTH AFRICA</p>
-        <h1 id="hero-title">Building software that <span>holds up.</span></h1>
-        <p class="hero-lede">I am Tumelo Phale. My professional foundation is C#/.NET backend development and Angular/TypeScript frontend work. I focus on clear validation, useful tests and evidence-led debugging while developing deeper capability in cloud systems, application security and service reliability.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="work.html">Explore projects</a>
-          <a class="button button-on-dark" href="notes.html">Read engineering notes</a>
-          <a class="hero-text-link" href="cv.html">View CV <span aria-hidden="true">↗</span></a>
+    <section class="front-page" id="top" aria-labelledby="hero-title">
+      <div class="front-page-copy">
+        <p class="overline"><span class="overline-mark"></span> SOFTWARE ENGINEER / JOHANNESBURG, ZA</p>
+        <h1 id="hero-title">Make the<br>behaviour<br><em>make sense.</em></h1>
+        <p class="front-intro">I'm Tumelo Phale. I build software across C#/.NET backends and Angular/TypeScript frontends. I care about what a system actually does, how to test its edges, and how to find the cause when something goes wrong.</p>
+        <div class="action-row">
+          <a class="action action-solid" href="work.html">Browse the work <span aria-hidden="true">↘</span></a>
+          <a class="action action-outline" href="about.html">How I approach engineering</a>
         </div>
-        <div class="hero-bottomline" aria-label="Engineering priorities">
-          <span>Understand behaviour</span>
-          <span>Test the boundary</span>
-          <span>Verify the outcome</span>
+        <div class="front-foot">
+          <span>01 / APPLICATIONS</span>
+          <span>02 / TESTING</span>
+          <span>03 / SYSTEMS</span>
         </div>
       </div>
-      <aside class="engineering-loop" aria-labelledby="loop-title">
-        <p class="diagram-label" id="loop-title">A practical engineering loop</p>
-        <ol>
-          <li><span class="loop-number">01</span><div><strong>Observe</strong><p>Reproduce the reported behaviour.</p></div></li>
-          <li><span class="loop-number">02</span><div><strong>Reason</strong><p>Separate evidence from assumptions.</p></div></li>
-          <li><span class="loop-number">03</span><div><strong>Change</strong><p>Keep the rule and boundary explicit.</p></div></li>
-          <li><span class="loop-number">04</span><div><strong>Verify</strong><p>Test expected and invalid paths.</p></div></li>
-        </ol>
-        <p class="diagram-footnote">A fix is not complete until its effect is checked.</p>
+      <aside class="front-diagram" aria-label="A system investigation sketch">
+        <div class="diagram-header"><span>FIELD SKETCH / 001</span><span>INPUT → OUTCOME</span></div>
+        <svg class="system-sketch" viewBox="0 0 420 340" role="img" aria-labelledby="sketch-title sketch-desc">
+          <title id="sketch-title">From a request to a verified outcome</title>
+          <desc id="sketch-desc">An input passes through validation and application logic, then produces a response. Tests and logs provide evidence at each stage.</desc>
+          <defs>
+            <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.2" fill="#8f99b0"/></pattern>
+          </defs>
+          <rect x="0" y="0" width="420" height="340" fill="url(#dots)" opacity=".45"/>
+          <path d="M42 62 H128 V134 H202 V205 H280 V275 H366" fill="none" stroke="#2445f4" stroke-width="2.5"/>
+          <circle cx="42" cy="62" r="7" fill="#f4f0e7" stroke="#2445f4" stroke-width="3"/>
+          <circle cx="128" cy="134" r="7" fill="#f75e3b"/>
+          <circle cx="202" cy="205" r="7" fill="#f4f0e7" stroke="#2445f4" stroke-width="3"/>
+          <circle cx="280" cy="275" r="7" fill="#f75e3b"/>
+          <circle cx="366" cy="275" r="7" fill="#f4f0e7" stroke="#2445f4" stroke-width="3"/>
+          <rect x="18" y="23" width="96" height="28" fill="#f4f0e7" stroke="#141822"/>
+          <text x="27" y="41" font-size="10" font-family="monospace" font-weight="700" fill="#141822">REQUEST</text>
+          <rect x="143" y="93" width="116" height="28" fill="#2445f4"/>
+          <text x="153" y="111" font-size="10" font-family="monospace" font-weight="700" fill="#fff">VALIDATION</text>
+          <rect x="207" y="165" width="126" height="28" fill="#f4f0e7" stroke="#141822"/>
+          <text x="217" y="183" font-size="10" font-family="monospace" font-weight="700" fill="#141822">APP LOGIC</text>
+          <rect x="278" y="231" width="110" height="28" fill="#f75e3b"/>
+          <text x="289" y="249" font-size="10" font-family="monospace" font-weight="700" fill="#141822">RESPONSE</text>
+          <path d="M55 86 L55 128 L91 128" fill="none" stroke="#141822" stroke-dasharray="3 4"/>
+          <text x="19" y="151" font-size="10" fill="#555d6e" font-family="monospace">test the edge</text>
+          <path d="M331 142 H383 V196" fill="none" stroke="#f75e3b" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <text x="315" y="132" font-size="10" fill="#555d6e" font-family="monospace">collect evidence</text>
+          <text x="23" y="313" font-size="10" fill="#555d6e" font-family="monospace">OBSERVE / REASON / VERIFY</text>
+        </svg>
+        <div class="diagram-caption"><span>FIG 01</span><p>A useful fix changes the observed behaviour, not just the error message.</p></div>
       </aside>
     </section>
 
-    <section class="home-intro section-shell" id="story" aria-labelledby="story-title">
-      <div class="intro-index">
-        <p class="section-kicker">01 / THE ENGINEER</p>
-        <p class="index-note">Application engineering first.<br>System behaviour always matters.</p>
-      </div>
-      <div class="intro-layout">
-        <h2 id="story-title">Understand the behaviour before changing it.</h2>
-        <div class="intro-copy">
-          <p>My professional work has included backend features, validation and business rules, automated testing, defect investigation and delivery workflows in business-critical software.</p>
-          <p>I am extending that foundation into cloud, security and reliability by learning how services behave across boundaries, how failures are diagnosed, and how engineering decisions can be made easier to review.</p>
-          <a class="underlined-link" href="about.html">About my approach <span aria-hidden="true">→</span></a>
-          <a class="underlined-link" href="experience.html">Professional experience <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
+    <section class="field-strip" aria-label="Current engineering focus">
+      <div><span class="strip-label">FOUNDATION</span><strong>.NET + TypeScript</strong></div>
+      <div><span class="strip-label">PRACTICE</span><strong>Validation + testing</strong></div>
+      <div><span class="strip-label">DIRECTION</span><strong>Cloud + security + reliability</strong></div>
     </section>
 
-    <section class="selected-work section-shell" id="work" aria-labelledby="work-title">
-      <div class="section-heading">
-        <div><p class="section-kicker">02 / SELECTED WORK</p><h2 id="work-title">Small tools. Clear boundaries.</h2></div>
-        <p class="section-aside">Independent browser applications with source code, setup notes and limitations stated up front.</p>
+    <section class="section-block project-index" id="work" aria-labelledby="work-title">
+      <div class="section-intro">
+        <p class="overline"><span class="overline-mark"></span> 01 / SELECTED WORK</p>
+        <h2 id="work-title">Built to answer<br>a <em>specific question.</em></h2>
+        <p>These are independent practice applications with working interactions and explicit limits. The links go straight to the demos and source.</p>
       </div>
-      <article class="project-row project-row-featured" aria-labelledby="randwise-title">
-        <div class="project-visual visual-randwise" aria-hidden="true">
-          <div class="mock-window-bar"><span>RANDWISE / MONTH VIEW</span><span>LOCAL DATA</span></div>
-          <div class="mock-metrics">
-            <div><small>INCOME</small><b>R 24,500</b></div>
-            <div><small>OUTGOING</small><b>R 16,820</b></div>
-          </div>
-          <div class="mock-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="mock-caption">FILTER · REVIEW · EXPORT</div>
-        </div>
-        <div class="project-copy">
-          <p class="project-kicker">PROJECT 01 / CASH FLOW WORKSPACE</p>
-          <div class="project-title-line"><h3 id="randwise-title">Randwise</h3><span class="project-status">Live demo</span></div>
-          <p>A local-first cash-flow planner for recording income and expenses, reviewing monthly totals and category breakdowns, and exporting filtered transactions to CSV.</p>
-          <ul class="project-facts"><li>Monthly summaries and search</li><li>Editable transactions</li><li>CSV export</li></ul>
-          <div class="project-actions">
-            <a class="button button-primary" href="https://tumelodev-arch.github.io/Randwise/">Open live demo</a>
-            <a class="text-link" href="https://github.com/tumelodev-arch/Randwise/blob/main/README.md" target="_blank" rel="noopener noreferrer">Setup and boundaries</a>
-            <a class="text-link" href="https://github.com/tumelodev-arch/Randwise" target="_blank" rel="noopener noreferrer">Source code</a>
-          </div>
-        </div>
-      </article>
       <div class="project-list">
-        <article class="project-row project-row-compact" aria-labelledby="incident-title">
-          <p class="project-index">02</p>
-          <div class="project-copy">
-            <p class="project-kicker">INCIDENT REVIEW WORKSPACE</p>
-            <div class="project-title-line"><h3 id="incident-title">Incident Atlas</h3><span class="project-status">Live demo</span></div>
-            <p>Record severity, impact, response notes and follow-up in one searchable incident log. This is an incident-review practice tool, not a monitoring or paging system.</p>
-            <div class="project-actions">
-              <a class="text-link" href="https://tumelodev-arch.github.io/IncidentAtlas/">Open live demo</a>
-              <a class="text-link" href="https://github.com/tumelodev-arch/IncidentAtlas/blob/main/README.md" target="_blank" rel="noopener noreferrer">Setup and boundaries</a>
-              <a class="text-link" href="https://github.com/tumelodev-arch/IncidentAtlas" target="_blank" rel="noopener noreferrer">Source code</a>
-            </div>
+        <article class="project-line project-line-blue">
+          <div class="project-number">01</div>
+          <div class="project-detail">
+            <p class="mini-label">CASH FLOW / LOCAL-FIRST</p>
+            <h3><a href="https://tumelodev-arch.github.io/Randwise/">Randwise <span aria-hidden="true">↗</span></a></h3>
+            <p>Can a small cash-flow tool make monthly income, spending and category patterns easier to inspect?</p>
+            <div class="project-meta"><span>Editable transactions</span><span>Monthly summaries</span><span>CSV export</span></div>
           </div>
+          <div class="project-links"><a href="https://tumelodev-arch.github.io/Randwise/" class="project-action">Open demo <span>↗</span></a><a href="https://github.com/tumelodev-arch/Randwise" target="_blank" rel="noopener noreferrer">Source code</a></div>
         </article>
-        <article class="project-row project-row-compact" aria-labelledby="decision-title">
-          <p class="project-index">03</p>
-          <div class="project-copy">
-            <p class="project-kicker">ARCHITECTURE DECISION RECORDS</p>
-            <div class="project-title-line"><h3 id="decision-title">Decision Archive</h3><span class="project-status">Live demo</span></div>
-            <p>Capture decision context, alternatives, rationale and consequences. Search records, export Markdown, and back up or restore validated JSON.</p>
-            <div class="project-actions">
-              <a class="text-link" href="https://tumelodev-arch.github.io/DecisionArchive/">Open live demo</a>
-              <a class="text-link" href="https://github.com/tumelodev-arch/DecisionArchive/blob/main/README.md" target="_blank" rel="noopener noreferrer">Setup and boundaries</a>
-              <a class="text-link" href="https://github.com/tumelodev-arch/DecisionArchive" target="_blank" rel="noopener noreferrer">Source code</a>
-            </div>
+        <article class="project-line project-line-orange">
+          <div class="project-number">02</div>
+          <div class="project-detail">
+            <p class="mini-label">INCIDENT REVIEW / PRACTICE TOOL</p>
+            <h3><a href="https://tumelodev-arch.github.io/IncidentAtlas/">Incident Atlas <span aria-hidden="true">↗</span></a></h3>
+            <p>Can impact, response and follow-up notes stay connected to an incident's lifecycle?</p>
+            <div class="project-meta"><span>Severity and state</span><span>Resolution metrics</span><span>JSON export</span></div>
           </div>
+          <div class="project-links"><a href="https://tumelodev-arch.github.io/IncidentAtlas/" class="project-action">Open demo <span>↗</span></a><a href="https://github.com/tumelodev-arch/IncidentAtlas" target="_blank" rel="noopener noreferrer">Source code</a></div>
+        </article>
+        <article class="project-line project-line-paper">
+          <div class="project-number">03</div>
+          <div class="project-detail">
+            <p class="mini-label">ARCHITECTURE / DECISION RECORDS</p>
+            <h3><a href="https://tumelodev-arch.github.io/DecisionArchive/">Decision Archive <span aria-hidden="true">↗</span></a></h3>
+            <p>Can context, alternatives and trade-offs remain understandable after a decision has been made?</p>
+            <div class="project-meta"><span>Search and status</span><span>Markdown export</span><span>JSON backup</span></div>
+          </div>
+          <div class="project-links"><a href="https://tumelodev-arch.github.io/DecisionArchive/" class="project-action">Open demo <span>↗</span></a><a href="https://github.com/tumelodev-arch/DecisionArchive" target="_blank" rel="noopener noreferrer">Source code</a></div>
         </article>
       </div>
-      <p class="project-boundary"><strong>Data boundary:</strong> the three apps save records in the current browser. They do not have accounts, a server or cloud sync. Use synthetic or non-sensitive data.</p>
-      <a class="all-work-link" href="work.html">Read project details and trade-offs <span aria-hidden="true">→</span></a>
+      <p class="boundary-note"><strong>Scope note.</strong> All three apps store records in the current browser. They have no account system, backend or cloud sync. Use synthetic or non-sensitive data. They are demonstrations, not production services.</p>
+      <a class="underlined-link" href="work.html">Read the case notes and constraints <span aria-hidden="true">↘</span></a>
     </section>
 
-    <section class="next-build-wrap" aria-labelledby="next-build-title">
-      <div class="next-build section-shell">
-        <div><p class="section-kicker">03 / NEXT SUBSTANTIAL BUILD</p><h2 id="next-build-title">Cloud Service Router</h2><p class="planned-note">Planned. Not implemented yet.</p></div>
-        <div class="next-build-copy">
-          <p>The next flagship project is a small .NET service that makes request routing, validation, timeouts, health checks, logging and failure behaviour testable. The implementation will be published after the architecture, code and automated tests provide real evidence.</p>
-          <p>This is a direction for the next build, not a claim about an existing system.</p>
-        </div>
+    <section class="next-in-line" aria-labelledby="next-title">
+      <div class="next-in-line-inner">
+        <div><p class="overline"><span class="overline-mark"></span> 02 / NEXT INVESTIGATION</p><h2 id="next-title">Cloud Service<br><em>Router</em></h2></div>
+        <div class="next-copy"><span class="status-stamp">PLANNED / NOT BUILT</span><p>A small .NET service is the next substantial build. The aim is to make request contracts, validation, health reporting, timeouts and failure handling testable, with design decisions and limitations visible in the repository.</p><a class="underlined-link" href="notes.html">Read how I document engineering questions <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
 
-    <section class="technical-foundation section-shell" id="foundation" aria-labelledby="foundation-title">
-      <div class="section-heading">
-        <div><p class="section-kicker">04 / TECHNICAL FOUNDATION</p><h2 id="foundation-title">What I use, what I am learning.</h2></div>
-        <p class="section-aside">Tools are part of the story. Decisions, tests and clear limits are the evidence.</p>
+    <section class="section-block method-section" aria-labelledby="method-title">
+      <div class="section-intro">
+        <p class="overline"><span class="overline-mark"></span> 03 / HOW I WORK</p>
+        <h2 id="method-title">The code is one part<br>of the <em>answer.</em></h2>
       </div>
-      <div class="foundation-grid">
-        <article class="foundation-item"><p class="foundation-label">APPLICATION DEVELOPMENT</p><h3>C# / .NET and TypeScript</h3><p>ASP.NET Core, REST APIs, Angular, SQL and application behaviour.</p></article>
-        <article class="foundation-item"><p class="foundation-label">TESTING AND DELIVERY</p><h3>Make behaviour observable</h3><p>Automated, regression and negative-path testing, Git, pull requests, CI troubleshooting and technical documentation.</p></article>
-        <article class="foundation-item"><p class="foundation-label">CURRENT LEARNING</p><h3>Cloud, security and reliability</h3><p>AWS foundations, service health, request boundaries, failure diagnosis and security review exercises.</p></article>
+      <div class="method-grid">
+        <article><span class="method-index">A / REPRODUCE</span><h3>Find the behaviour</h3><p>Start with a repeatable example. Keep the observed result separate from the explanation.</p></article>
+        <article><span class="method-index">B / MAKE EXPLICIT</span><h3>Define the boundary</h3><p>State what input is valid, what can fail, and what response should follow.</p></article>
+        <article><span class="method-index">C / VERIFY</span><h3>Check the change</h3><p>Use tests and a focused review to confirm the fix addresses the original issue.</p></article>
       </div>
-      <a class="underlined-link" href="about.html#technical-foundation">Read the detailed technical map <span aria-hidden="true">→</span></a>
+      <a class="underlined-link" href="about.html">More about my technical foundation <span aria-hidden="true">↗</span></a>
     </section>
 
-    <section class="notes-preview section-shell" aria-labelledby="notes-title">
-      <div class="notes-preview-heading">
-        <p class="section-kicker">05 / ENGINEERING NOTES</p><h2 id="notes-title">The reasoning belongs next to the result.</h2>
-        <p>Short notes on investigation, validation and how to make the next decision clearer.</p>
-        <a class="underlined-link" href="notes.html">All engineering notes <span aria-hidden="true">→</span></a>
-      </div>
-      <div class="notes-preview-list">
-        <a href="notes.html#note-001"><span>NOTE 001</span><strong>A failing build is evidence, not a diagnosis.</strong><span aria-hidden="true">↗</span></a>
-        <a href="notes.html#note-002"><span>NOTE 002</span><strong>Validation is part of the domain.</strong><span aria-hidden="true">↗</span></a>
-        <a href="notes.html#note-003"><span>NOTE 003</span><strong>Write down what would disprove the hypothesis.</strong><span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-
-    <section class="home-contact" id="contact" aria-labelledby="contact-title">
-      <div class="section-shell home-contact-inner">
-        <div><p class="section-kicker">06 / CONTACT</p><h2 id="contact-title">Let's talk engineering.</h2><p>For roles, project feedback or a question about something on this site, email is the simplest way to reach me.</p></div>
-        <div class="contact-actions">
-          <a class="button button-primary" href="mailto:tumelojuniorphale@gmail.com">Email Tumelo</a>
-          <a class="button button-on-dark" href="https://www.linkedin.com/in/tumelo-junior-phale-a6579527b/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
-          <a class="text-link text-link-light" href="https://github.com/tumelodev-arch" target="_blank" rel="noopener noreferrer">GitHub profile</a>
-        </div>
-      </div>
+    <section class="closing-band" aria-labelledby="closing-title">
+      <div><p class="overline">OPEN FILE / 004</p><h2 id="closing-title">Still learning.<br>Careful with claims.</h2></div>
+      <div><p>I want the portfolio to show both the implementation and the reasoning behind it. That includes what works, what does not, and what I would investigate next.</p><a class="action action-light" href="contact.html">Get in touch <span aria-hidden="true">↗</span></a></div>
     </section>
   </main>
 
-  <footer class="site-footer reference-footer">
-    <div class="shell footer-inner">
-      <a class="footer-brand" href="index.html">TUMELO PHALE<span class="brand-mark">.</span></a>
-      <p>Software Engineer · Cloud · Security · Reliability</p>
-      <p>Made and maintained by Tumelo Phale. <span>© <span data-current-year>2026</span></span></p>
-    </div>
+  <footer class="page-footer">
+    <a class="signature signature-footer" href="index.html"><span class="signature-mark">TP</span><span class="signature-text">ENGINEERING<br>FIELD NOTES</span></a>
+    <p>Software Engineer / Cloud, Security, Reliability</p>
+    <p>Johannesburg, South Africa <span class="footer-year">© <span data-current-year>2026</span></span></p>
   </footer>
 </body>
 </html>
