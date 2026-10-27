@@ -31,7 +31,7 @@ Dark mode uses paper `#17191B`, surface `#222528`, text `#F3EEE3`, secondary tex
 | UI | 13 to 15 px | 500 | 1.4 | 0 |
 | Mono label | 11 to 13 px | 400 | 1.6 | 0.04em |
 
-Serif display uses Georgia as a system fallback. Body uses Arial until local font assets are deliberately added. Mono uses JetBrains Mono with Cascadia Code and Consolas fallbacks. No external font request is required.
+Instrument Serif, IBM Plex Sans and JetBrains Mono are loaded from one Google Fonts stylesheet request with preconnect hints and `display=swap`. System fallbacks remain in place if the font request fails. The site loads no third-party scripts.
 
 ## Spacing and interaction
 
