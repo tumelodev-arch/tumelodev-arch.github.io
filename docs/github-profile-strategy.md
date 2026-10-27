@@ -10,7 +10,7 @@ The portfolio describes the problems and the reasoning. GitHub contains the code
 
 1. Name and role.
 2. A short, direct statement of C#/.NET and Angular/TypeScript experience.
-3. Three selected projects with links to running demos and source.
+3. Three to five selected projects, led by the strongest implemented work, with links to running demos and source.
 4. Current direction: cloud, security and service reliability.
 5. An engineering approach grounded in observable behaviour, testing and evidence.
 6. A clear link to the portfolio and LinkedIn.
@@ -35,7 +35,7 @@ A substantial repository should explain the problem, implemented behaviour, arch
 
 ## Current projects
 
-The portfolio currently features RuleTrace, ReleaseLens, Randwise, Incident Atlas and Decision Archive. The independent browser applications use synthetic data and local browser storage. RuleTrace's API is not hosted and ReleaseLens does not connect to a live CI provider.
+The portfolio currently features RuleTrace, ReleaseLens, Randwise, Incident Atlas and Decision Archive. Randwise, Incident Atlas and Decision Archive have separate repositories. RuleTrace and ReleaseLens source still sits inside the portfolio repository; that migration is pending. The browser applications use synthetic data and local browser storage. RuleTrace's API is not hosted and ReleaseLens does not connect to a live CI provider.
 
 ## Planned work
 
