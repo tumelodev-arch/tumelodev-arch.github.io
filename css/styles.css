@@ -6,12 +6,13 @@
   --ink: #141822;
   --ink-soft: #363b49;
   --muted: #596071;
-  --quiet: #626879;
+  --quiet: #555c6d;
   --rule: #c9c4b9;
   --blue: #2445f4;
   --blue-deep: #1732c9;
   --blue-pale: #e0e5ff;
   --orange: #f75e3b;
+  --orange-ink: #8a291a;
   --orange-pale: #ffe2d8;
   --mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
   --body: "Segoe UI", Arial, Helvetica, sans-serif;
@@ -89,7 +90,7 @@ strong { color: var(--ink); }
 .diagram-header { display: flex; justify-content: space-between; gap: .6rem; color: var(--muted); font-size: .58rem; }
 .system-sketch { width: 100%; height: auto; margin-block: .8rem; }
 .diagram-caption { display: grid; grid-template-columns: 3.2rem 1fr; gap: .8rem; padding-top: .85rem; border-top: 1px solid var(--rule); }
-.diagram-caption > span { color: var(--orange); }
+.diagram-caption > span { color: var(--orange-ink); }
 .diagram-caption p { margin: 0; color: var(--muted); font-size: .78rem; }
 .field-strip { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); width: min(var(--wide),calc(100% - 2 * var(--gutter))); margin: 0 auto; border: 1px solid var(--ink); border-top: 0; background: var(--paper-deep); }
 .field-strip > div { display: grid; gap: .25rem; padding: .95rem 1.2rem; }
@@ -103,13 +104,13 @@ strong { color: var(--ink); }
 .project-list { border-top: 1px solid var(--ink); }
 .project-line { display: grid; grid-template-columns: 2.6rem minmax(0,1fr) minmax(108px,.36fr); gap: 1rem; padding: 1.35rem 0; border-bottom: 1px solid var(--ink); }
 .project-number { color: var(--blue); font: 800 .95rem/1.5 var(--mono); }
-.project-line-orange .project-number { color: var(--orange); }
+.project-line-orange .project-number { color: var(--orange-ink); }
 .project-line-paper .project-number { color: var(--ink-soft); }
 .mini-label { margin-bottom: .5rem; color: var(--quiet); font-size: .59rem; }
 .project-detail h3 { margin-bottom: .6rem; }
 .project-detail h3 a { color: var(--ink); text-decoration: none; }
 .project-detail h3 a:hover { color: var(--blue); }
-.project-detail h3 span { color: var(--orange); font-size: .8em; }
+.project-detail h3 span { color: var(--orange-ink); font-size: .8em; }
 .project-detail > p:not(.mini-label) { max-width: 53ch; margin-bottom: .8rem; color: var(--muted); font-size: .9rem; }
 .project-meta { display: flex; flex-wrap: wrap; gap: .35rem .8rem; color: var(--quiet); font-size: .57rem; }
 .project-meta span { padding: .18rem .35rem; border: 1px solid var(--rule); }
@@ -120,7 +121,7 @@ strong { color: var(--ink); }
 .boundary-note { margin-block: 1.4rem 1rem; padding: 1rem 1.1rem; border-left: 4px solid var(--orange); background: var(--orange-pale); color: var(--ink-soft); font-size: .84rem; }
 .boundary-note strong { color: var(--ink); }
 .underlined-link { display: inline-flex; align-items: center; gap: .55rem; color: var(--blue-deep); font-size: .88rem; font-weight: 750; text-decoration: underline; text-underline-offset: .25em; }
-.underlined-link:hover { color: var(--orange); }
+.underlined-link:hover { color: var(--orange-ink); }
 .next-in-line { padding: clamp(2.8rem,6vw,5rem) var(--gutter); background: var(--blue); color: white; }
 .next-in-line-inner { display: grid; grid-template-columns: minmax(240px,.8fr) minmax(0,1.2fr); gap: 2rem 5rem; width: min(var(--wide),100%); margin-inline: auto; }
 .next-in-line .overline, .next-in-line h2 { color: white; }
@@ -198,7 +199,7 @@ strong { color: var(--ink); }
 .notes-index-link:hover { padding-left: .6rem; background: var(--paper-deep); color: var(--ink); }
 .note-entry { display: grid; grid-template-columns: minmax(170px,.55fr) minmax(0,1.45fr); gap: 1.5rem 3.5rem; padding-block: 2.7rem; border-bottom: 1px solid var(--ink); scroll-margin-top: 1rem; }
 .note-entry header { align-self: start; }
-.note-reference { display: block; margin-bottom: .6rem; color: var(--orange); }
+.note-reference { display: block; margin-bottom: .6rem; color: var(--orange-ink); }
 .note-entry h2 { margin-bottom: .65rem; font-size: clamp(1.55rem,3vw,2.4rem); text-transform: none; }
 .note-entry .note-subtitle { color: var(--quiet); font-size: .82rem; }
 .note-entry .note-copy h3 { margin-top: 1.4rem; font-size: 1.12rem; }
