@@ -1,58 +1,40 @@
-# Tumelo Phale | Engineering Portfolio
+# Tumelo Phale | Engineering Field Notes
 
-The public portfolio of a software engineer with professional experience across C#/.NET backends and Angular/TypeScript frontends, developing deeper capability in cloud, application security and service reliability.
+A software engineering portfolio documenting working examples, technical decisions and the limits of each project. My professional foundation is C#/.NET backend development and Angular/TypeScript frontend work, with cloud, security and reliability as the next areas of depth.
 
 **Live portfolio:** https://tumelodev-arch.github.io/
 
 ## Start here
 
-- [Home and selected work](https://tumelodev-arch.github.io/)
-- [Projects and engineering boundaries](https://tumelodev-arch.github.io/work.html)
+- [Overview](https://tumelodev-arch.github.io/)
+- [Projects and implementation boundaries](https://tumelodev-arch.github.io/work.html)
 - [About and technical foundation](https://tumelodev-arch.github.io/about.html)
 - [Professional experience](https://tumelodev-arch.github.io/experience.html)
 - [Engineering notes](https://tumelodev-arch.github.io/notes.html)
 - [CV](https://tumelodev-arch.github.io/cv.html)
 
-## Independent browser applications
+## Projects
 
-Each project has its own source repository. GitHub Pages deployment workflows for all three applications have reported success.
+| Project | What it demonstrates | Boundary |
+| --- | --- | --- |
+| [RuleTrace](https://github.com/tumelodev-arch/tumelodev-arch.github.io/tree/main/projects/RuleTrace) | .NET validation API, deterministic rules and test source | API runs locally, is not hosted and has no authentication or persistence |
+| [ReleaseLens](https://github.com/tumelodev-arch/tumelodev-arch.github.io/tree/main/projects/ReleaseLens) | TypeScript dashboard with filters, derived metrics, run details and CSV export | Uses invented build records and does not connect to a live CI provider |
+| [Randwise](https://github.com/tumelodev-arch/Randwise) | Local-first cash-flow planner with monthly summaries and CSV export | No bank integration, server or financial advice |
+| [Incident Atlas](https://github.com/tumelodev-arch/IncidentAtlas) | Local incident register with lifecycle actions, filters and JSON export | Not a monitoring, paging or on-call system |
+| [Decision Archive](https://github.com/tumelodev-arch/DecisionArchive) | Architecture decision records, Markdown export and JSON backup/restore | No accounts, shared storage or cloud sync |
 
-### Randwise
+Randwise, Incident Atlas and Decision Archive are deployed as static browser applications. They store records in the current browser and do not send them to a backend. Use synthetic or non-sensitive data.
 
-A local-first cash-flow planner with editable income and expense records, monthly summaries, category breakdowns and filtered CSV export.
+## Next planned build
 
-- **Demo:** https://tumelodev-arch.github.io/Randwise/
-- **Source and setup:** https://github.com/tumelodev-arch/Randwise
+**Cloud Service Router** is planned, not implemented. The aim is a small .NET service with explicit request contracts, validation, meaningful error responses, health reporting, automated tests and documented failure behaviour. It will be added as a project only after the implementation and test evidence exist.
 
-### Incident Atlas
+## How this site is built
 
-A local incident review log with severity and state filters, impact and response notes, resolution metrics and JSON export. It is not a monitoring, paging or on-call platform.
+The portfolio uses static HTML and CSS with a small JavaScript file for the current year and CV print action. It is intended to remain lightweight and easy to review.
 
-- **Demo:** https://tumelodev-arch.github.io/IncidentAtlas/
-- **Source and setup:** https://github.com/tumelodev-arch/IncidentAtlas
+The visual system is documented in docs/DESIGN_SYSTEM.md. The portfolio workflow checks internal HTML references, JavaScript syntax, ReleaseLens TypeScript and the RuleTrace test suite.
 
-### Decision Archive
+## Public sharing boundaries
 
-A local-first Architecture Decision Record workspace with search, tags, lifecycle status, Markdown export and validated JSON backup/restore.
-
-- **Demo:** https://tumelodev-arch.github.io/DecisionArchive/
-- **Source and setup:** https://github.com/tumelodev-arch/DecisionArchive
-
-All three apps store records in the current browser. They do not provide user accounts, a backend service, cloud sync or shared storage. Use synthetic or non-sensitive information. Deployment checks are not a substitute for manual browser, mobile and accessibility testing.
-
-## Additional examples
-
-- **RuleTrace:** a .NET validation API and separate browser example using synthetic records. The API is for local development and is not presented as a hosted service.
-- **ReleaseLens:** a TypeScript dashboard using invented build history. It does not connect to a live CI provider.
-- **Engineering notes:** short reflections on debugging, validation and hypothesis testing.
-
-## Engineering standards
-
-- Keep public examples independently written and use synthetic data.
-- Explain setup, implemented behaviour, tests, security boundaries and limitations.
-- Prefer small changes with working quality checks over superficial activity.
-- Do not publish employer source code, customer data, internal identifiers, private screenshots, internal URLs, secrets or proprietary business rules.
-
-## Quality checks
-
-The portfolio workflow checks local HTML references, JavaScript syntax, TypeScript compilation and the existing RuleTrace test suite. Automated checks do not replace a manual review of responsive layout, keyboard use, colour contrast and hosted behaviour.
+Examples use invented data and generic terminology. This repository does not publish employer source code, customer information, internal URLs, ticket identifiers, secrets or proprietary business rules. Notes describe an engineering approach, not a claim of seniority.
