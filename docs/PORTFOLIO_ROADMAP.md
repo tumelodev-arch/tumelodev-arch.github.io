@@ -11,10 +11,14 @@ The new presentation direction is the Engineering Field Notes: paper-like surfac
 | Repository | Purpose |
 | --- | --- |
 | [Profile README](https://github.com/tumelodev-arch/tumelodev-arch) | Concise career narrative and selected project links |
-| [Portfolio site](https://github.com/tumelodev-arch/tumelodev-arch.github.io) | Main narrative, engineering notes, RuleTrace and ReleaseLens |
+| [Portfolio site](https://github.com/tumelodev-arch/tumelodev-arch.github.io) | Main narrative, engineering notes and demo pages; RuleTrace and ReleaseLens source still live here pending migration |
 | [Randwise](https://github.com/tumelodev-arch/Randwise) | Cash-flow planning practice app |
 | [IncidentAtlas](https://github.com/tumelodev-arch/IncidentAtlas) | Incident review practice app |
 | [DecisionArchive](https://github.com/tumelodev-arch/DecisionArchive) | Architecture decision record app |
+
+### Repository split still pending
+
+Randwise, Incident Atlas and Decision Archive have their own repositories. RuleTrace and ReleaseLens source still lives under this portfolio repository's `projects/` directory. Their dedicated repositories have not been created, so the source migration and link updates are not complete. TracePad remains an unfeatured prototype; decide whether to archive it or move it before publishing it as a project.
 
 ## Evidence already available
 
