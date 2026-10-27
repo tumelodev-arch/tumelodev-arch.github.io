@@ -1,64 +1,66 @@
-# Portfolio makeover — implementation record
+# Portfolio and GitHub roadmap
 
-## Goal
+## Positioning
 
-Present a focused, credible portfolio of working software and evidence. Prefer a few explainable projects with reliable checks over a large list of unfinished exercises.
+Tumelo Phale is a software engineer with professional experience across C#/.NET backends and Angular/TypeScript frontends. The portfolio emphasises application behaviour, validation, testing and evidence-led investigation, with cloud, application security and service reliability as the next areas of depth.
+
+The rule for each public claim is simple: show the implementation, document its limits, and keep planned work visibly separate from completed work.
 
 ## Repository inventory
 
-| Repository | Disposition | Next action |
+| Repository | Purpose | Current role |
 | --- | --- | --- |
-| [tumelodev-arch](https://github.com/tumelodev-arch/tumelodev-arch) | Keep | Maintain an employer-neutral profile README that links to demonstrable work. |
-| [tumelodev-arch.github.io](https://github.com/tumelodev-arch/tumelodev-arch.github.io) | Keep and improve | Portfolio pages, RuleTrace source/demo, ReleaseLens dashboard, quality checks and technical notes. |
-| [Randwise](https://github.com/tumelodev-arch/Randwise) | Keep | Independent local-first cash-flow planner. |
-| [IncidentAtlas](https://github.com/tumelodev-arch/IncidentAtlas) | Keep | Independent local-first incident review workspace. |
-| [DecisionArchive](https://github.com/tumelodev-arch/DecisionArchive) | Keep | Independent local-first architecture decision register. |
+| [Profile README](https://github.com/tumelodev-arch/tumelodev-arch) | Professional summary and project entry point | Keep concise, project-led and evidence-based |
+| [Portfolio site](https://github.com/tumelodev-arch/tumelodev-arch.github.io) | Portfolio pages, engineering notes, RuleTrace and ReleaseLens examples | Main narrative and case-study layer |
+| [Randwise](https://github.com/tumelodev-arch/Randwise) | Local-first cash-flow planner | Independent source and Pages demo |
+| [IncidentAtlas](https://github.com/tumelodev-arch/IncidentAtlas) | Local incident review workspace | Independent source and Pages demo |
+| [DecisionArchive](https://github.com/tumelodev-arch/DecisionArchive) | Local-first ADR workspace | Independent source and Pages demo |
 
-Five public repositories are currently confirmed. The three app repositories hold substantive extracted applications, not empty placeholders. No repository was archived or deleted.
+## Evidence and boundaries
 
-## Evidence map
-
-| Claim | Evidence | Boundary |
+| Work | What can be inspected | What it does not claim |
 | --- | --- | --- |
-| Validation design | RuleTrace evaluator, API routes, xUnit source and architecture | API is local and not deployed; CI must verify the tests. |
-| Interactive data exploration | ReleaseLens filters, derived metrics, run detail and CSV export | Invented fixture data only; no live CI provider. |
-| Static web delivery | Hosted portfolio, source repositories and GitHub Actions workflows | The three standalone app demos are not live until Pages is enabled in each repository and deployment succeeds. Deployment success does not replace manual responsive/accessibility review. |
-| Engineering communication | Project docs, architecture notes and field notes | Notes describe an approach, not a claim of seniority. |
+| RuleTrace | .NET validation API source, deterministic rule evaluation, health/validation routes and test source | The API is not hosted and has no authentication or persistence |
+| ReleaseLens | TypeScript dashboard, filtering, derived metrics, run details and CSV export | Fixture data is invented; no live CI integration |
+| Randwise | Browser-side transaction editing, monthly summaries and CSV export | No bank connection, backend or financial advice |
+| Incident Atlas | Incident lifecycle, search, response notes, summary metrics and JSON export | No monitoring agent, paging, alerting or shared team system |
+| Decision Archive | Decision records, search/filtering, Markdown export and JSON backup/restore | No sign-in, access control, team sync or cloud storage |
 
-## Work order
+GitHub Pages deployment workflows for the three independent applications have reported success. Their public URLs are listed on the portfolio and in each repository README. A successful deployment check is not a replacement for manual end-to-end and accessibility review.
 
-1. Keep the quality workflow green and fix broken references, type errors or failed tests before adding features.
-2. Add ReleaseLens tests for filtering, metrics and CSV escaping.
-3. Add RuleTrace API integration tests for valid JSON, malformed requests and response contracts.
-4. Revisit TracePad only after defining a distinct problem and tests; do not feature it until it adds new evidence.
-5. Consider deploying RuleTrace only after its security model, structured logging, config, request validation and release process are ready.
-6. Randwise, Incident Atlas and Decision Archive have been extracted into their own repositories. Avoid further splits unless they materially improve setup, maintenance or review.
+## Next build: Cloud Service Router
 
-## Sustainable cadence
+This is a plan, not an existing repository or a completed project.
 
-Aim for three focused sessions per week and roughly 3–5 hours total. Keep one flagship project active, one documentation/quality task, two evenings free and one protected rest day. Make small, reviewable changes. A maintenance week each month is better than starting another project to maintain an activity streak.
+1. Define the service boundary and request/response contracts.
+2. Add explicit validation and useful error responses.
+3. Add timeout and failure behaviour only where the design requires it.
+4. Cover expected and invalid paths with automated tests.
+5. Add health reporting, structured logs and correlation identifiers.
+6. Document architecture decisions, run instructions, test results and remaining limits.
+7. Review the service from a security and operational perspective before publishing a case study.
 
-## Manual account actions
+Do not add cloud services or infrastructure tooling without a clear design reason. Docker is not required for the initial build.
 
-- [ ] Update GitHub bio to: “Software engineer working with .NET and TypeScript, building towards cloud-native services and reliability.”
-- [ ] Set profile website to `https://tumelodev-arch.github.io/`.
-- [ ] Set the profile repo description to: “Software engineering profile and learning roadmap focused on .NET application development, testing and cloud-native growth.”
-- [ ] Set the portfolio repo description to: “Personal engineering portfolio featuring a validation API and browser demo, a TypeScript delivery-history dashboard and technical notes.”
-- [ ] Pin only repos a reviewer can inspect meaningfully; do not create empty repos to fill six slots.
-- [ ] Review the portfolio branch on desktop and mobile after merge; enable Pages in each app repository and test the hosted flows only after successful deployment.
+## Suggested sequence
 
-## Safety boundaries
+1. Review the portfolio redesign branch at desktop and mobile widths.
+2. Keep the profile README linked to real, inspectable work and remove unused visual activity widgets.
+3. Build the Cloud Service Router as the flagship implementation.
+4. Add a bounded secure .NET API exercise with a threat model and tests for the controls it implements.
+5. Build a reliability exercise that demonstrates failure, diagnosis and recovery.
+6. Write case studies after the code and test evidence exist.
 
-Do not delete repositories, rewrite Git history, or change visibility under this plan. If a real secret is found in history, revoke it and follow the relevant incident process before cleanup.
+Three strong repositories are better than six partially maintained ones. Add another repository only when it offers a distinct problem and engineering evidence that a reviewer can inspect.
 
-## Additional projects implemented
+## Public sharing boundaries
 
-Three standalone browser applications have been extracted from the portfolio into independent source repositories. Their hosted demos are not active yet; enable GitHub Pages with GitHub Actions in each app repository and confirm a successful deployment before listing the URLs as live.
+Use invented data and generic domain language. Do not publish employer code, internal system or team names, customer details, private screenshots, internal URLs, ticket identifiers, secrets or proprietary rules. A clean current tree does not establish that the full Git history is clean. Revoke any exposed credential before dealing with historical cleanup.
 
-| Project | Source / setup | Core workflow | Boundary |
-| --- | --- | --- | --- |
-| Randwise | [Repository](https://github.com/tumelodev-arch/Randwise) · [Local setup](https://github.com/tumelodev-arch/Randwise/blob/main/README.md) | Income/expense records, monthly metrics, spending categories and CSV export | Local browser storage; no bank or financial service integration; hosted demo pending Pages activation |
-| Incident Atlas | [Repository](https://github.com/tumelodev-arch/IncidentAtlas) · [Local setup](https://github.com/tumelodev-arch/IncidentAtlas/blob/main/README.md) | Incident intake, severity/state, mitigation notes, resolution metrics and JSON export | Incident log only; no monitoring, paging or alert delivery; hosted demo pending Pages activation |
-| Decision Archive | [Repository](https://github.com/tumelodev-arch/DecisionArchive) · [Local setup](https://github.com/tumelodev-arch/DecisionArchive/blob/main/README.md) | Decision records, statuses, tags, search, Markdown export and JSON backup/restore | Local archive; no shared team account or cloud sync; hosted demo pending Pages activation |
+## Manual GitHub settings
 
-Each app includes a standalone README. Use synthetic starter records when demoing. Data entered into a public demo is stored in the current browser, not the repository; do not use confidential or sensitive information. Static CI checks confirm internal links, JavaScript syntax and existing RuleTrace/ReleaseLens quality checks, but they do not replace manual end-to-end testing of every browser interaction.
+The connected repository tools can create branches, commits and pull requests, but do not expose account bio, website field, pinned repositories or repository About description editing. After reviewing the profile README, update those settings in GitHub:
+
+- Bio: Software Engineer | Cloud, Security and Reliability
+- Website: https://tumelodev-arch.github.io/
+- Pin only repositories that a reviewer can inspect meaningfully.

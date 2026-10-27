@@ -1,51 +1,58 @@
-# Tumelo Phale — Engineering Portfolio
+# Tumelo Phale | Engineering Portfolio
 
-The public portfolio for a junior software engineer focused on .NET backend development, validation, production investigation, reliability and technical learning.
+The public portfolio of a software engineer with professional experience across C#/.NET backends and Angular/TypeScript frontends, developing deeper capability in cloud, application security and service reliability.
 
-**Live site:** https://tumelodev-arch.github.io/
+**Live portfolio:** https://tumelodev-arch.github.io/
 
 ## Start here
 
-- [Portfolio home](https://tumelodev-arch.github.io/)
+- [Home and selected work](https://tumelodev-arch.github.io/)
+- [Projects and engineering boundaries](https://tumelodev-arch.github.io/work.html)
+- [About and technical foundation](https://tumelodev-arch.github.io/about.html)
 - [Professional experience](https://tumelodev-arch.github.io/experience.html)
-- [Selected work and engineering notes](https://tumelodev-arch.github.io/work.html)
-- [About](https://tumelodev-arch.github.io/about.html)
-- [Notes](https://tumelodev-arch.github.io/notes.html)
+- [Engineering notes](https://tumelodev-arch.github.io/notes.html)
 - [CV](https://tumelodev-arch.github.io/cv.html)
 
 ## Independent browser applications
 
-Each interactive browser app now has its own repository, workflow, and end-to-end test.
+Each project has its own source repository. GitHub Pages deployment workflows for all three applications have reported success.
 
-### Randwise — cash-flow planner
+### Randwise
 
-Record income and expenses in South African rand, review monthly totals and category breakdowns, and export filtered transactions to CSV.
+A local-first cash-flow planner with editable income and expense records, monthly summaries, category breakdowns and filtered CSV export.
 
-- **Hosted demo:** pending GitHub Pages activation.
-- [Source repository](https://github.com/tumelodev-arch/Randwise) · [Run locally / setup](https://github.com/tumelodev-arch/Randwise/blob/main/README.md)
+- **Demo:** https://tumelodev-arch.github.io/Randwise/
+- **Source and setup:** https://github.com/tumelodev-arch/Randwise
 
-### Incident Atlas — incident review workspace
+### Incident Atlas
 
-Record incident severity, impact and response notes, search and filter the register, resolve or reopen incidents, and export JSON.
+A local incident review log with severity and state filters, impact and response notes, resolution metrics and JSON export. It is not a monitoring, paging or on-call platform.
 
-- **Hosted demo:** pending GitHub Pages activation.
-- [Source repository](https://github.com/tumelodev-arch/IncidentAtlas) · [Run locally / setup](https://github.com/tumelodev-arch/IncidentAtlas/blob/main/README.md)
+- **Demo:** https://tumelodev-arch.github.io/IncidentAtlas/
+- **Source and setup:** https://github.com/tumelodev-arch/IncidentAtlas
 
-### Decision Archive — architecture decision records
+### Decision Archive
 
-Capture decision context, rationale, alternatives, consequences, status and tags. Search records, export Markdown, and back up or restore JSON.
+A local-first Architecture Decision Record workspace with search, tags, lifecycle status, Markdown export and validated JSON backup/restore.
 
-- **Hosted demo:** pending GitHub Pages activation.
-- [Source repository](https://github.com/tumelodev-arch/DecisionArchive) · [Run locally / setup](https://github.com/tumelodev-arch/DecisionArchive/blob/main/README.md)
+- **Demo:** https://tumelodev-arch.github.io/DecisionArchive/
+- **Source and setup:** https://github.com/tumelodev-arch/DecisionArchive
 
-**Initial hosting note:** the app repositories include GitHub Pages deployment workflows. Their Pages source must be enabled as **GitHub Actions** in each repository's Settings → Pages before the demo URLs will go live. Until that first deployment completes, run the app locally by opening its index.html.
+All three apps store records in the current browser. They do not provide user accounts, a backend service, cloud sync or shared storage. Use synthetic or non-sensitive information. Deployment checks are not a substitute for manual browser, mobile and accessibility testing.
 
-## Remaining portfolio code
+## Additional examples
 
-This repository keeps the portfolio pages, engineering notes, and other project material that is still presented here. The three browser applications listed above are maintained in their own repositories and will not be checked into this portfolio repository after this migration.
+- **RuleTrace:** a .NET validation API and separate browser example using synthetic records. The API is for local development and is not presented as a hosted service.
+- **ReleaseLens:** a TypeScript dashboard using invented build history. It does not connect to a live CI provider.
+- **Engineering notes:** short reflections on debugging, validation and hypothesis testing.
+
+## Engineering standards
+
+- Keep public examples independently written and use synthetic data.
+- Explain setup, implemented behaviour, tests, security boundaries and limitations.
+- Prefer small changes with working quality checks over superficial activity.
+- Do not publish employer source code, customer data, internal identifiers, private screenshots, internal URLs, secrets or proprietary business rules.
 
 ## Quality checks
 
-The portfolio workflow validates local HTML references, JavaScript syntax, the remaining TypeScript project, and the RuleTrace .NET tests. Each independent browser-app repository has its own JavaScript syntax check and Playwright end-to-end test for its main workflow.
-
-All example records use synthetic data. The portfolio separates independent demonstrations from professional experience and does not expose employer code, customer records, internal URLs, ticket IDs or proprietary rules.
+The portfolio workflow checks local HTML references, JavaScript syntax, TypeScript compilation and the existing RuleTrace test suite. Automated checks do not replace a manual review of responsive layout, keyboard use, colour contrast and hosted behaviour.

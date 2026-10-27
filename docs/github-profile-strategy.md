@@ -1,75 +1,68 @@
 # GitHub profile and portfolio strategy
 
-**Positioning:** software engineer working mainly with .NET and TypeScript, building stronger end-to-end capability in service design, testing, cloud delivery and reliability.
+## Public positioning
 
-## Suggested profile copy
+**Tumelo Phale | Software Engineer | Cloud · Security · Reliability**
 
-- **Bio:** Software engineer working with .NET and TypeScript, building towards cloud-native services and reliability.
-- **Website:** https://tumelodev-arch.github.io/
-- **LinkedIn:** https://www.linkedin.com/in/tumelo-junior-phale-a6579527b/
-- **Profile README:** root `README.md` in the `tumelodev-arch` profile repository.
+The profile, portfolio and LinkedIn should tell one coherent story:
 
-## Public repositories
+1. **Portfolio:** what problems the work addresses, how it is structured, and where its limits are.
+2. **GitHub:** how the implementation, tests and decisions can be inspected.
+3. **LinkedIn:** the professional context and direction of continued development.
 
-| Repository | Decision | Rationale |
-| --- | --- | --- |
-| `tumelodev-arch` | Keep | Main GitHub profile README; focus on skills and evidence. |
-| `tumelodev-arch.github.io` | Keep and improve | Portfolio pages, RuleTrace source/demo, ReleaseLens dashboard and engineering notes. |
-| `Randwise` | Keep | Standalone local-first cash-flow planner with CSV export. |
-| `IncidentAtlas` | Keep | Standalone incident review log with search, lifecycle actions and JSON export. |
-| `DecisionArchive` | Keep | Standalone architecture decision records with Markdown and JSON portability. |
+The emphasis is dependable software, not a claim of seniority or production ownership that public examples cannot prove.
 
-Five public repositories are currently confirmed: the profile README, the portfolio, Randwise, Incident Atlas and Decision Archive. Keep repository boundaries intentional; do not delete, archive, privatise or create repositories merely to optimise appearance.
+## Profile README standard
 
-## Project boundaries
+- Lead with professional experience across C#/.NET backends and Angular/TypeScript frontends.
+- Feature only projects with source links and honest scope boundaries.
+- Separate existing evidence from planned work.
+- Describe cloud, security and reliability as areas of active learning unless an implementation proves more.
+- Avoid generated contribution calendars, activity graphs, stat cards, badge rows, proficiency percentages and large technology icon walls.
+- Keep the structure readable in GitHub's native Markdown view.
 
-### RuleTrace
-The source contains a .NET 10 minimal API, deterministic rules, health/validation routes and xUnit test source. The static browser demo is independent from the API. The API is not deployed; there is no authentication or persistence. Next: verify tests in CI, add endpoint-level integration tests and improve malformed-request errors before deployment.
+## Portfolio structure
 
-### ReleaseLens
-The static TypeScript dashboard supports search, filters, derived metrics, run details and browser-side CSV export. Its data is synthetic, and it does not connect to a CI provider. Next: add tests for filter logic, metrics and CSV escaping.
+The top-level navigation is Home, Projects, About, Notes, CV and Contact. The homepage carries the summary and selected work. Projects hold implementation details and limitations. About describes engineering approach, technical foundation and additional learning. Notes record reasoning rather than presenting themselves as tutorials.
 
-## Repository README standard
+The site remains static HTML, CSS and a small JavaScript file. Keep semantic HTML, visible keyboard focus, responsive layouts, reduced-motion support, meaningful links and a small dependency footprint. Do not add a framework or deployment stack unless it solves a real problem.
 
-A substantive project README should state the problem, scope, implemented behaviour, architecture, setup, tests, verification status, security boundaries, limitations and roadmap. Use `templates/PROJECT_README_TEMPLATE.md`.
+## Repository roles
 
-## Public sharing rules
+| Repository | Role |
+| --- | --- |
+| [Profile repository](https://github.com/tumelodev-arch/tumelodev-arch) | Professional entry point and selected project links |
+| [Portfolio site](https://github.com/tumelodev-arch/tumelodev-arch.github.io) | Portfolio pages, technical notes, RuleTrace and ReleaseLens examples |
+| [Randwise](https://github.com/tumelodev-arch/Randwise) | Independent local-first cash-flow planner |
+| [IncidentAtlas](https://github.com/tumelodev-arch/IncidentAtlas) | Independent local incident review tool |
+| [DecisionArchive](https://github.com/tumelodev-arch/DecisionArchive) | Independent Architecture Decision Record workspace |
 
-Use synthetic fixtures. Do not publish employer code, internal names, customer details, private screenshots, internal URLs, ticket IDs, proprietary rules, credentials or connection strings. A clean current tree does not prove the complete Git history is clean; review history and revoke exposed secrets.
+The three browser apps have separate source repositories and successful GitHub Pages deployment runs. Their READMEs must distinguish live static demos from local storage and must not imply server-side processing, authentication or synchronization.
 
-See `SECURITY_REVIEW_CHECKLIST.md` before release.
+## Planned project sequence
 
-## Pins and descriptions
+### 1. Cloud Service Router
 
-Pin only projects a reviewer can run or inspect. The portfolio is the main landing page. Consider pinning a balanced set of substantive repositories—portfolio, RuleTrace/ReleaseLens source, and the strongest standalone browser apps—rather than pinning every repository automatically.
+Planned, not implemented. Use a small .NET service to demonstrate request contracts, validation, health reporting, logs, timeouts and meaningful failure behaviour. Include tests and architecture notes. Avoid infrastructure components without a clear design reason. Docker is not required for the initial version.
 
-Recommended descriptions:
-- Profile repo: “Software engineering profile and learning roadmap focused on .NET application development, testing and cloud-native growth.”
-- Portfolio repo: “Personal engineering portfolio featuring a validation API and browser demo, a TypeScript delivery-history dashboard and technical notes.”
-- Randwise: “Local-first ZAR cash-flow planner with transaction editing, monthly summaries and CSV export.”
-- IncidentAtlas: “Local-first incident review workspace with severity tracking, resolution metrics and JSON export.”
-- DecisionArchive: “Local-first architecture decision register with search, Markdown export and validated JSON backup.”
+### 2. Secure .NET API
 
-The GitHub bio, website field, pinned repository order and About descriptions are account/repository settings. Update them in the GitHub UI if the connected API does not expose the required write permission.
+After the first service has a stable implementation, add a bounded security exercise with a threat model, control-to-test mapping and documented limitations. Do not call an API secure merely because it includes validation.
 
-## Quality workflow
+### 3. Reliability exercise
 
-The portfolio quality workflow checks local HTML references, JavaScript syntax, TypeScript compilation and RuleTrace tests. A green job confirms those automated checks only; manually review responsive layout, keyboard navigation and live-demo behaviour.
+Demonstrate failure paths, diagnosis and recovery in a small, reproducible service scenario. Document what is measured and what remains outside the exercise.
 
-## Terminal-style profile presentation
+Build these projects before writing polished case studies. Do not display a plan as an implemented system.
 
-The published profile README now uses a terminal-inspired header, compact technology icons, command-prompt sections for skills and project links, public GitHub statistics, an activity graph and a generated 3D/isometric contribution calendar. The profile repo contains the banner SVG and a scheduled GitHub Actions workflow for refreshing the calendar. The generator action is pinned to a specific commit and uses the repository-scoped `GITHUB_TOKEN`; it commits only generated calendar SVGs.
+## Project README standard
 
-- [Published profile README](https://github.com/tumelodev-arch/tumelodev-arch)
-- [Profile contribution-calendar workflow](https://github.com/tumelodev-arch/tumelodev-arch/blob/main/.github/workflows/profile-3d.yml)
-- [Terminal banner source](https://github.com/tumelodev-arch/tumelodev-arch/blob/main/assets/profile-terminal.svg)
+Every substantial repository should cover problem, scope, implemented behaviour, architecture, local setup, test commands and results, security/data boundaries, limitations and next steps. Use synthetic fixtures and record what has actually been verified.
 
-## New independent tools
+## Security and confidentiality
 
-Three additional independent browser applications have their own source repositories. Their GitHub Pages deployments are not live yet; enable Pages with GitHub Actions in each repository and confirm a successful deployment before calling these demos live:
+Do not publish employer code, internal names, customer details, private screenshots, internal URLs, ticket IDs, proprietary business rules, credentials or connection strings. Removing a secret from the latest commit does not remove it from history; revoke exposed credentials first and follow a deliberate cleanup process.
 
-- **Randwise** — a ZAR cash-flow planner with transaction CRUD, month/type/category filters, savings-rate calculation, spending breakdown and filtered CSV export.
-- **Incident Atlas** — an incident log with severity, service, impact/response notes, open/resolved state changes, median resolution duration and JSON export.
-- **Decision Archive** — an ADR-style decision register with lifecycle statuses, tags, search/filter, Markdown export and validated JSON backup/restore.
+## Account settings still requiring GitHub UI
 
-All three run as static browser apps and persist data in local storage. They do not have a server, accounts, cloud sync or third-party service integrations. Do not describe them as cloud-connected or production-operated services. The source links and local setup instructions are listed on [the tools hub](https://tumelodev-arch.github.io/lab.html); the hosted URLs remain pending until Pages deployment succeeds.
+The connected repository tools do not expose account bio, website, pins or About description editing. Suggested bio: **Software Engineer | Cloud, Security and Reliability**. Set the website to the live portfolio. Pin only work a reviewer can inspect meaningfully, not repositories created to meet a quota.
