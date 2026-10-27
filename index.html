@@ -161,6 +161,31 @@
     <header class="section-head"><p class="eyebrow">SUITE 05 <span>/ USES</span></p><div><h2 id="uses-title">Tools are useful when the question is clear.</h2><p>My daily work centres on reading and changing code, running tests, and figuring out why something failed.</p></div></header>
     <div class="uses-list"><div><span>01 / EDIT</span><p>VS Code for code and review.</p></div><div><span>02 / DEBUG</span><p>Browser devtools, test output and PowerShell for focused investigation.</p></div><div><span>03 / DATA</span><p>SQL Server Management Studio when I need to inspect application data.</p></div><div><span>04 / AI PROMPTS</span><p>I ask for a plain-language issue statement, separate confirmed facts from hypotheses, list missing details and suggest tests before suggesting a fix.</p></div></div>
     <p class="uses-note">The ticket-reader prompt desk will use the prompt I actually provide. Until then, the placeholder stays a placeholder.</p>
+    <div class="prompt-desk" id="prompt-desk">
+      <div class="prompt-head"><div><p class="eyebrow">PROMPT DESK <span>/ SYNTHETIC DEMO</span></p><h3>Read the issue before proposing a fix.</h3></div><span class="status-chip status-pending">PROMPT TEXT PENDING</span></div>
+      <div class="prompt-columns">
+        <div class="prompt-input">
+          <label for="synthetic-ticket">Synthetic ticket input</label>
+          <textarea id="synthetic-ticket" rows="7">In a fictional invoicing app, an invoice detail page sometimes shows an older note after the user saves an edit. It happens intermittently. The report does not include browser details, steps to reproduce, or evidence from the network panel.</textarea>
+          <p class="prompt-caption">Invented example. No real ticket, system, customer or internal URL is used.</p>
+          <label for="ticket-prompt">Ticket-reader prompt</label>
+          <div id="ticket-prompt" class="prompt-placeholder" role="note">[Paste the sanitised prompt you actually use here. The prompt text has not been supplied, so it is intentionally blank.]</div>
+          <div class="prompt-version" aria-label="Prompt revision status"><button type="button" disabled>First draft</button><button type="button" disabled>Current version</button></div>
+          <button type="button" class="button button-secondary" disabled aria-describedby="prompt-copy-note">Copy assembled prompt</button>
+          <p id="prompt-copy-note" class="prompt-caption">Available after the real sanitised prompt is added and reviewed.</p>
+        </div>
+        <div class="prompt-output">
+          <p class="mono-label">ILLUSTRATIVE OUTPUT FORMAT / NOT AI TOOL OUTPUT</p>
+          <details open><summary>01 / Issue in plain language</summary><p>The saved invoice note may not be reflected immediately on the detail page.</p></details>
+          <details><summary>02 / Confirmed vs suspected</summary><p><strong>Confirmed from the synthetic report:</strong> the issue is intermittent and concerns a stale note after saving. <strong>Not confirmed:</strong> the cause, browser, request response, caching behaviour or reproduction steps.</p></details>
+          <details><summary>03 / Missing details</summary><p>Ask for repeatable steps, browser and version, the response after saving, whether a reload changes the note, and whether the issue affects one or several invoices.</p></details>
+          <details><summary>04 / Fixes ranked by risk</summary><p>Do not change code yet. First capture the save request and subsequent read, then reproduce with a controlled example. Any implementation change depends on that evidence.</p></details>
+          <details><summary>05 / Acceptance criteria and tests</summary><p>After saving a changed note, the displayed value matches the saved value. Test immediate save, reload, repeated edits, slow response and a failed save.</p></details>
+          <p class="prompt-caption">This is a manually written illustration for a fictional ticket, not output from Tumelo's work prompt.</p>
+        </div>
+      </div>
+      <p class="prompt-rule">The reader suggests. A human decides. I check suggested fixes against the code before changing anything.</p>
+    </div>
   </section>
 
   <section class="suite contact-suite" id="contact" data-suite="06" aria-labelledby="contact-title">
