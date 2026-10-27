@@ -1,22 +1,157 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#14251f"><meta name="description" content="Independent browser applications and engineering notes by Tumelo Phale."><title>Projects | Tumelo Phale</title><link rel="stylesheet" href="css/styles.css"><script src="js/main.js" defer></script></head>
-<body><a class="skip-link" href="#main">Skip to content</a><header class="site-header reference-header">
-  <a class="brand" href="index.html" aria-label="Tumelo Phale, home"><span class="brand-name">TUMELO PHALE<span class="brand-mark">.</span></span></a>
-  <nav aria-label="Main navigation">
-    <a href="index.html">Home</a>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e7">
+  <meta name="description" content="Project notes, implementation evidence and boundaries for Tumelo Phale's software engineering work.">
+  <title>Projects | Tumelo Phale</title>
+  <link rel="stylesheet" href="css/styles.css"><script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="masthead">
+  <a class="signature" href="index.html" aria-label="Tumelo Phale home"><span class="signature-mark">TP</span><span class="signature-text">ENGINEERING<br>FIELD NOTES</span></a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="index.html">Overview</a>
     <a href="work.html" aria-current="page">Projects</a>
     <a href="about.html">About</a>
     <a href="notes.html">Notes</a>
     <a href="cv.html">CV</a>
-    <a href="contact.html" class="nav-contact">Contact</a>
+    <a href="contact.html" class="nav-contact">Contact <span aria-hidden="true">↗</span></a>
   </nav>
 </header>
-<main id="main" class="shell page-main"><span id="ruletrace" hidden aria-hidden="true"></span><span id="releaselens" hidden aria-hidden="true"></span>
-<header class="page-heading"><p class="eyebrow"><span class="eyebrow-rule"></span> PROJECT INDEX / PUBLIC WORK</p><h1>Small tools for questions I keep coming back to.</h1><p>Each project has a narrow problem, a working implementation, and a limitation worth stating. The apps use synthetic data and do not connect to private systems. Live browser demos are available. Each app stores records locally and has no backend, account system or cloud sync.</p></header>
-<section class="project-case" id="randwise"><div class="case-side"><p class="eyebrow">01 / CASH FLOW WORKSPACE</p><span class="project-status status-prototype">Browser application</span><h2>Randwise</h2><p class="case-deck">A monthly cash-flow planner for recording income and expenses, understanding category totals and keeping a portable record.</p><div class="case-meta"><div><span>Tools</span><strong>HTML · CSS · JavaScript</strong></div><div><span>Persistence</span><strong>Browser localStorage</strong></div><div><span>Data</span><strong>User-entered or synthetic</strong></div></div><div class="case-links"><a class="button button-primary" href="https://tumelodev-arch.github.io/Randwise/">Open live demo</a><a class="text-link" href="https://github.com/tumelodev-arch/Randwise/blob/main/README.md" target="_blank" rel="noopener noreferrer">Setup and boundaries</a><a class="text-link" href="https://github.com/tumelodev-arch/Randwise" target="_blank" rel="noopener noreferrer">Source code</a></div></div><div class="case-main"><div class="case-details-grid"><div><h3>The problem</h3><p>Raw transactions are difficult to reason about without a month, type and category view.</p></div><div><h3>What is implemented</h3><p>Create, edit and delete entries; filter and search; review income, expenses, net position and category totals; export visible rows as CSV.</p></div><div class="case-limitation"><h3>Boundary</h3><p>No bank connection, financial account, server or financial advice. Records are stored in the current browser.</p></div></div></div></section>
-<section class="project-case" id="incident-atlas"><div class="case-side"><p class="eyebrow">02 / INCIDENT REVIEW</p><span class="project-status status-prototype">Browser application</span><h2>Incident Atlas</h2><p class="case-deck">A focused incident log for practising response coordination, recording impact and keeping follow-up notes attached to an event.</p><div class="case-meta"><div><span>Tools</span><strong>HTML · CSS · JavaScript</strong></div><div><span>Workflow</span><strong>Open → resolved → review</strong></div><div><span>Data</span><strong>Synthetic examples or your own</strong></div></div><div class="case-links"><a class="button button-primary" href="https://tumelodev-arch.github.io/IncidentAtlas/">Open live demo</a><a class="text-link" href="https://github.com/tumelodev-arch/IncidentAtlas/blob/main/README.md" target="_blank" rel="noopener noreferrer">Setup and boundaries</a><a class="text-link" href="https://github.com/tumelodev-arch/IncidentAtlas" target="_blank" rel="noopener noreferrer">Source code</a></div></div><div class="case-main"><div class="case-details-grid"><div><h3>The problem</h3><p>Incident notes lose value when severity, impact, status and response are scattered across separate places.</p></div><div><h3>What is implemented</h3><p>Severity and status filters, searchable records, resolve/reopen actions, response notes, summary metrics and JSON export.</p></div><div class="case-limitation"><h3>Boundary</h3><p>This is not live monitoring, paging, on-call management or an incident system of record. Use synthetic data; no confidential details.</p></div></div></div></section>
-<section class="project-case" id="decision-archive"><div class="case-side"><p class="eyebrow">03 / ARCHITECTURE RECORDS</p><span class="project-status status-prototype">Browser application</span><h2>Decision Archive</h2><p class="case-deck">A lightweight ADR workspace for preserving context, selected options and the trade-offs behind technical decisions.</p><div class="case-meta"><div><span>Tools</span><strong>HTML · CSS · JavaScript</strong></div><div><span>Records</span><strong>Context · rationale · consequences</strong></div><div><span>Portability</span><strong>Markdown and JSON</strong></div></div><div class="case-links"><a class="button button-primary" href="https://tumelodev-arch.github.io/DecisionArchive/">Open live demo</a><a class="text-link" href="https://github.com/tumelodev-arch/DecisionArchive/blob/main/README.md" target="_blank" rel="noopener noreferrer">Setup and boundaries</a><a class="text-link" href="https://github.com/tumelodev-arch/DecisionArchive" target="_blank" rel="noopener noreferrer">Source code</a></div></div><div class="case-main"><div class="case-details-grid"><div><h3>The problem</h3><p>A decision without its context and alternatives is difficult to revisit when requirements change.</p></div><div><h3>What is implemented</h3><p>Create and maintain records with status, tags, search and filters; export Markdown and back up or restore validated JSON.</p></div><div class="case-limitation"><h3>Boundary</h3><p>No sign-in, team collaboration, access control or shared storage. Records stay in this browser unless exported.</p></div></div></div></section>
-<section class="tools-inline-section"><div class="section-heading"><div><p class="eyebrow">04 / ENGINEERING NOTES</p><h2>Problems before technology.</h2></div><a class="text-link" href="notes.html">Read all notes <span aria-hidden="true">→</span></a></div><div class="tools-inline-grid"><article><p class="project-kicker">VALIDATION / BACKEND</p><h3><a href="notes.html#note-002">Business rules at the boundary</a></h3><p>Why validation needs explicit rules, predictable responses and negative-path tests—not only happy-path checks.</p><a class="text-link" href="notes.html#note-002">Read note ↗</a></article><article><p class="project-kicker">DEBUGGING / INVESTIGATION</p><h3><a href="notes.html#note-001">A failure is not a diagnosis</a></h3><p>Start from observable symptoms, gather evidence, test hypotheses and verify the change that addresses the cause.</p><a class="text-link" href="notes.html#note-001">Read note ↗</a></article><article><p class="project-kicker">RELIABILITY / CLOUD</p><h3><a href="notes.html#note-003">Disprove the hypothesis</a></h3><p>During distributed-system exercises, separate service symptoms from likely causes and make the verification step explicit.</p><a class="text-link" href="notes.html#note-003">Read note ↗</a></article></div></section>
-<section class="project-practice"><p class="eyebrow">PROJECT RULE</p><p>I only mark work as implemented when there is something you can open, inspect or run. I use sample data in public demos, and I keep employer code and internal details out of the repository.</p></section>
+<main id="main" class="page-shell">
+  <header class="page-hero">
+    <p class="overline"><span class="overline-mark"></span> PROJECT INDEX / WORKING EXAMPLES</p>
+    <h1>Small systems.<br><em>Clear boundaries.</em></h1>
+    <p>Each project begins with a specific question. The point is not to display a stack of technologies, but to make a behaviour, decision or limitation easy to inspect.</p>
+  </header>
+
+  <section class="project-case" id="ruletrace">
+    <aside class="case-side">
+      <span class="case-number">01 / API</span>
+      <h2>RuleTrace</h2>
+      <p>A .NET validation API with a separate browser example using invented records.</p>
+      <div class="case-meta"><span>C#</span><span>.NET 10</span><span>xUnit</span></div>
+      <div class="case-links">
+        <a class="action action-solid" href="projects/RuleTrace/demo.html">Open browser example ↗</a>
+        <a href="https://github.com/tumelodev-arch/tumelodev-arch.github.io/tree/main/projects/RuleTrace" target="_blank" rel="noopener noreferrer">API source</a>
+        <a href="https://github.com/tumelodev-arch/tumelodev-arch.github.io/blob/main/projects/RuleTrace/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer">Architecture notes</a>
+      </div>
+    </aside>
+    <div class="case-body">
+      <p class="detail-label">THE QUESTION</p><p>Can a validation result explain which rule was evaluated and why an invented record failed or passed?</p>
+      <h3>What is implemented</h3>
+      <p>The source contains a .NET minimal API, deterministic validation rules, health and validation routes, and xUnit test source. The browser example is a separate client-side demonstration; it does not call a hosted version of the API.</p>
+      <div class="case-detail-grid">
+        <div><span class="detail-label">EVIDENCE</span><p>Rule evaluation, explicit outcomes, API routes and test source in the repository.</p></div>
+        <div><span class="detail-label">BOUNDARY</span><p>The API runs locally. It is not hosted and does not implement authentication or persistence.</p></div>
+      </div>
+      <p class="small-note">Next checks: confirm test results in CI, add endpoint-level integration tests and make malformed-request responses more explicit.</p>
+    </div>
+  </section>
+
+  <section class="project-case" id="releaselens">
+    <aside class="case-side">
+      <span class="case-number">02 / DASHBOARD</span>
+      <h2>ReleaseLens</h2>
+      <p>A TypeScript dashboard for exploring synthetic build and deployment history.</p>
+      <div class="case-meta"><span>TypeScript</span><span>HTML</span><span>CSS</span></div>
+      <div class="case-links">
+        <a class="action action-solid" href="projects/ReleaseLens/index.html">Open dashboard ↗</a>
+        <a href="https://github.com/tumelodev-arch/tumelodev-arch.github.io/tree/main/projects/ReleaseLens" target="_blank" rel="noopener noreferrer">Source files</a>
+      </div>
+    </aside>
+    <div class="case-body">
+      <p class="detail-label">THE QUESTION</p><p>Can build outcomes, failure categories and run details be explored without connecting to a real CI provider?</p>
+      <h3>What is implemented</h3>
+      <p>The dashboard supports search, filters, derived metrics, run details and browser-side CSV export. Its dataset is invented to make the interaction repeatable and safe to share.</p>
+      <div class="case-detail-grid">
+        <div><span class="detail-label">EVIDENCE</span><p>Filtering, summary calculations, run-detail views and CSV export in the frontend.</p></div>
+        <div><span class="detail-label">BOUNDARY</span><p>The dashboard does not connect to GitHub Actions or another CI provider. The data is sample data.</p></div>
+      </div>
+      <p class="small-note">Next checks: add focused tests for filters, derived metrics and CSV escaping.</p>
+    </div>
+  </section>
+
+  <section class="project-case" id="randwise">
+    <aside class="case-side">
+      <span class="case-number">03 / LOCAL APP</span>
+      <h2>Randwise</h2>
+      <p>A local-first cash-flow planner for income, expenses and monthly summaries.</p>
+      <div class="case-meta"><span>JavaScript</span><span>Local storage</span><span>CSV</span></div>
+      <div class="case-links">
+        <a class="action action-solid" href="https://tumelodev-arch.github.io/Randwise/">Open live demo ↗</a>
+        <a href="https://github.com/tumelodev-arch/Randwise" target="_blank" rel="noopener noreferrer">Source repository</a>
+        <a href="https://github.com/tumelodev-arch/Randwise/blob/main/README.md" target="_blank" rel="noopener noreferrer">Setup and boundaries</a>
+      </div>
+    </aside>
+    <div class="case-body">
+      <p class="detail-label">THE QUESTION</p><p>Can a small budgeting tool make a month's income, outgoing and spending categories easier to understand?</p>
+      <h3>What is implemented</h3>
+      <p>Users can add, edit and delete transactions, search and filter by month/type/category, review summary metrics and export the visible rows as CSV.</p>
+      <div class="case-detail-grid">
+        <div><span class="detail-label">EVIDENCE</span><p>Transaction editing, filtering, derived totals, category summaries and CSV export.</p></div>
+        <div><span class="detail-label">BOUNDARY</span><p>No bank connection, server, account system or financial advice. Records stay in the current browser.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-case" id="incident-atlas">
+    <aside class="case-side">
+      <span class="case-number">04 / PRACTICE TOOL</span>
+      <h2>Incident Atlas</h2>
+      <p>A local incident review log for severity, impact, response and follow-up notes.</p>
+      <div class="case-meta"><span>JavaScript</span><span>Search/filter</span><span>JSON</span></div>
+      <div class="case-links">
+        <a class="action action-solid" href="https://tumelodev-arch.github.io/IncidentAtlas/">Open live demo ↗</a>
+        <a href="https://github.com/tumelodev-arch/IncidentAtlas" target="_blank" rel="noopener noreferrer">Source repository</a>
+        <a href="https://github.com/tumelodev-arch/IncidentAtlas/blob/main/README.md" target="_blank" rel="noopener noreferrer">Setup and boundaries</a>
+      </div>
+    </aside>
+    <div class="case-body">
+      <p class="detail-label">THE QUESTION</p><p>Can a review log keep incident status and response notes connected so that follow-up is not lost?</p>
+      <h3>What is implemented</h3>
+      <p>Create, edit and delete incidents, change state, search and filter by severity/state, review summary metrics and export data as JSON.</p>
+      <div class="case-detail-grid">
+        <div><span class="detail-label">EVIDENCE</span><p>Incident lifecycle actions, filters, response fields and resolution summaries.</p></div>
+        <div><span class="detail-label">BOUNDARY</span><p>This is not a monitoring agent, pager, alert router or shared incident system. Use synthetic data only.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-case" id="decision-archive">
+    <aside class="case-side">
+      <span class="case-number">05 / DECISIONS</span>
+      <h2>Decision Archive</h2>
+      <p>A small Architecture Decision Record workspace for preserving rationale and trade-offs.</p>
+      <div class="case-meta"><span>JavaScript</span><span>Markdown</span><span>JSON</span></div>
+      <div class="case-links">
+        <a class="action action-solid" href="https://tumelodev-arch.github.io/DecisionArchive/">Open live demo ↗</a>
+        <a href="https://github.com/tumelodev-arch/DecisionArchive" target="_blank" rel="noopener noreferrer">Source repository</a>
+        <a href="https://github.com/tumelodev-arch/DecisionArchive/blob/main/README.md" target="_blank" rel="noopener noreferrer">Setup and boundaries</a>
+      </div>
+    </aside>
+    <div class="case-body">
+      <p class="detail-label">THE QUESTION</p><p>Can a technical decision still make sense later, when its context, alternatives and consequences are easy to find?</p>
+      <h3>What is implemented</h3>
+      <p>Create and edit decision records, track status and tags, search and filter entries, export Markdown and back up or restore JSON with basic record validation.</p>
+      <div class="case-detail-grid">
+        <div><span class="detail-label">EVIDENCE</span><p>Decision lifecycle, search, Markdown export and JSON backup/restore.</p></div>
+        <div><span class="detail-label">BOUNDARY</span><p>No sign-in, team collaboration, access control or cloud sync. Records remain local unless exported.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section content-grid">
+    <div><p class="margin-label">NEXT / NOT BUILT</p><h2>Cloud Service Router</h2></div>
+    <div><p>This is the next planned flagship, not an existing repository. The goal is a small .NET service with documented request contracts, validation, health reporting, tests and intentional failure behaviour. I will publish a case study after there is code and test evidence to inspect.</p><span class="status-stamp">PLANNED / NOT BUILT</span></div>
+  </section>
 </main>
-<footer class="site-footer"><div class="shell footer-inner"><a class="brand footer-brand" href="index.html#top" aria-label="Tumelo Phale, home"><span class="brand-name">TUMELO PHALE<span class="brand-mark">_</span></span></a><p>Made and maintained by Tumelo Phale.</p><p>© <span data-current-year>2026</span></p><a href="notes.html">Notes index <span aria-hidden="true">↗</span></a></div></footer></body></html>
+<footer class="page-footer">
+  <a class="signature signature-footer" href="index.html"><span class="signature-mark">TP</span><span class="signature-text">ENGINEERING<br>FIELD NOTES</span></a>
+  <p>Software Engineer / Cloud, Security, Reliability</p>
+  <p>Johannesburg, South Africa <span class="footer-year">© <span data-current-year>2026</span></span></p>
+</footer>
+</body>
+</html>
