@@ -23,15 +23,15 @@ Dark mode uses paper `#17191B`, surface `#222528`, text `#F3EEE3`, secondary tex
 
 | Role | Size | Weight | Line height | Tracking |
 | --- | ---: | ---: | ---: | ---: |
-| Hero | 44 to 68 px | 400 | 0.99 | -0.045em |
-| Section heading | 34 to 48 px | 400 | 1.08 | -0.045em |
-| Project heading | 29 to 32 px | 400 | 1.1 | -0.045em |
+| Hero | `clamp(2.75rem, 5vw, 4rem)` | 700 | 1.05 | -0.02em |
+| Section heading | `clamp(2rem, 3.5vw, 2.5rem)` | 600 | 1.15 | -0.01em |
+| Project heading | 29 to 32 px | 600 | 1.1 | -0.01em |
 | Lead | 18 to 20 px | 400 | 1.6 | 0 |
 | Body | 17 to 18 px | 400 | 1.6 | 0 |
 | UI | 13 to 15 px | 500 | 1.4 | 0 |
 | Mono label | 11 to 13 px | 400 | 1.6 | 0.04em |
 
-Instrument Serif, IBM Plex Sans and JetBrains Mono are loaded from one Google Fonts stylesheet request with preconnect hints and `display=swap`. System fallbacks remain in place if the font request fails. The site loads no third-party scripts.
+Bricolage Grotesque (600, 700, 800), IBM Plex Sans (400, 500, 600) and JetBrains Mono (400, 500) are loaded from Google Fonts with `display=swap`. Display headings use a system sans fallback stack; body text keeps IBM Plex Sans with system sans fallbacks; console, labels and status text use JetBrains Mono. No custom `@font-face` rules are used.
 
 ## Spacing and interaction
 
@@ -39,4 +39,4 @@ Use 8 px increments, with 4 px for small label spacing. Desktop rail is 240 px; 
 
 ## Contrast note
 
-Normal text must meet 4.5:1 and large text 3:1. Ink on paper, ink on surface, muted ink on paper, and terminal text on terminal pass AA by calculation. Vermilion is not used as normal-size text on light paper because it misses 4.5:1; a darker text variant is used for small links. Re-check every implemented pair with a contrast tool before release.
+Normal text must meet 4.5:1 and large text 3:1. Ink on paper, ink on surface, muted ink on paper, and terminal text on terminal pass AA by calculation. Vermilion `#E4572E` is used for emphasis and decorative accents, not normal-size text on light paper. Small text links and heading emphasis use darker vermilion `#B93B1A` on light surfaces; dark mode uses `#FF8A6B`. Re-check all implemented pairs before release.
