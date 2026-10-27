@@ -1,68 +1,50 @@
-# GitHub profile and portfolio strategy
+# GitHub profile strategy
 
-## Public positioning
+## One coherent engineering story
 
-**Tumelo Phale | Software Engineer | Cloud · Security · Reliability**
+**Tumelo Phale / Software Engineer / Cloud, Security, Reliability**
 
-The profile, portfolio and LinkedIn should tell one coherent story:
+The portfolio describes the problems and the reasoning. GitHub contains the code, tests and setup. LinkedIn supplies professional context. These surfaces should share the same positioning without repeating the same wall of information.
 
-1. **Portfolio:** what problems the work addresses, how it is structured, and where its limits are.
-2. **GitHub:** how the implementation, tests and decisions can be inspected.
-3. **LinkedIn:** the professional context and direction of continued development.
+## Profile README structure
 
-The emphasis is dependable software, not a claim of seniority or production ownership that public examples cannot prove.
+1. Name and role.
+2. A short, direct statement of C#/.NET and Angular/TypeScript experience.
+3. Three selected projects with links to running demos and source.
+4. Current direction: cloud, security and service reliability.
+5. An engineering approach grounded in observable behaviour, testing and evidence.
+6. A clear link to the portfolio and LinkedIn.
 
-## Profile README standard
+Avoid badge rows, stat cards, contribution artwork, skill percentages and decorative icon walls. Native Markdown should carry the content without external rendering dependencies.
 
-- Lead with professional experience across C#/.NET backends and Angular/TypeScript frontends.
-- Feature only projects with source links and honest scope boundaries.
-- Separate existing evidence from planned work.
-- Describe cloud, security and reliability as areas of active learning unless an implementation proves more.
-- Avoid generated contribution calendars, activity graphs, stat cards, badge rows, proficiency percentages and large technology icon walls.
-- Keep the structure readable in GitHub's native Markdown view.
+## Visual identity
 
-## Portfolio structure
+Use the Engineering Field Notes system:
 
-The top-level navigation is Home, Projects, About, Notes, CV and Contact. The homepage carries the summary and selected work. Projects hold implementation details and limitations. About describes engineering approach, technical foundation and additional learning. Notes record reasoning rather than presenting themselves as tutorials.
+- Warm paper, black ink, cobalt blue and signal orange.
+- Large type, a compact monospace index and deliberate asymmetry.
+- Technical diagrams and numbered project entries instead of generic card grids.
+- Direct calls to action such as Open demo, Source code and Read project notes.
+- Same visual family across the portfolio and README, while individual applications can keep interfaces suited to their specific tasks.
 
-The site remains static HTML, CSS and a small JavaScript file. Keep semantic HTML, visible keyboard focus, responsive layouts, reduced-motion support, meaningful links and a small dependency footprint. Do not add a framework or deployment stack unless it solves a real problem.
+The visual system and accessibility requirements are described in docs/DESIGN_SYSTEM.md.
 
-## Repository roles
+## Project standard
 
-| Repository | Role |
-| --- | --- |
-| [Profile repository](https://github.com/tumelodev-arch/tumelodev-arch) | Professional entry point and selected project links |
-| [Portfolio site](https://github.com/tumelodev-arch/tumelodev-arch.github.io) | Portfolio pages, technical notes, RuleTrace and ReleaseLens examples |
-| [Randwise](https://github.com/tumelodev-arch/Randwise) | Independent local-first cash-flow planner |
-| [IncidentAtlas](https://github.com/tumelodev-arch/IncidentAtlas) | Independent local incident review tool |
-| [DecisionArchive](https://github.com/tumelodev-arch/DecisionArchive) | Independent Architecture Decision Record workspace |
+A substantial repository should explain the problem, implemented behaviour, architecture, setup, test commands and results, data/security boundaries, limitations and next steps. Mark plans as planned. Do not present a technology list as evidence in itself.
 
-The three browser apps have separate source repositories and successful GitHub Pages deployment runs. Their READMEs must distinguish live static demos from local storage and must not imply server-side processing, authentication or synchronization.
+## Current projects
 
-## Planned project sequence
+The portfolio currently features RuleTrace, ReleaseLens, Randwise, Incident Atlas and Decision Archive. The independent browser applications use synthetic data and local browser storage. RuleTrace's API is not hosted and ReleaseLens does not connect to a live CI provider.
 
-### 1. Cloud Service Router
+## Planned work
 
-Planned, not implemented. Use a small .NET service to demonstrate request contracts, validation, health reporting, logs, timeouts and meaningful failure behaviour. Include tests and architecture notes. Avoid infrastructure components without a clear design reason. Docker is not required for the initial version.
+Cloud Service Router is the next planned flagship. Add it after there is code to review, tests to run and architecture decisions worth explaining. Then consider a security-focused .NET API and a small reliability exercise.
 
-### 2. Secure .NET API
+## Confidentiality and truthfulness
 
-After the first service has a stable implementation, add a bounded security exercise with a threat model, control-to-test mapping and documented limitations. Do not call an API secure merely because it includes validation.
+Do not publish employer code, customer data, internal names, URLs, ticket identifiers, secrets or proprietary business rules. Distinguish professional experience, hands-on learning and independent public implementations. Each is valuable, but they are different kinds of evidence.
 
-### 3. Reliability exercise
+## Account settings to complete manually
 
-Demonstrate failure paths, diagnosis and recovery in a small, reproducible service scenario. Document what is measured and what remains outside the exercise.
-
-Build these projects before writing polished case studies. Do not display a plan as an implemented system.
-
-## Project README standard
-
-Every substantial repository should cover problem, scope, implemented behaviour, architecture, local setup, test commands and results, security/data boundaries, limitations and next steps. Use synthetic fixtures and record what has actually been verified.
-
-## Security and confidentiality
-
-Do not publish employer code, internal names, customer details, private screenshots, internal URLs, ticket IDs, proprietary business rules, credentials or connection strings. Removing a secret from the latest commit does not remove it from history; revoke exposed credentials first and follow a deliberate cleanup process.
-
-## Account settings still requiring GitHub UI
-
-The connected repository tools do not expose account bio, website, pins or About description editing. Suggested bio: **Software Engineer | Cloud, Security and Reliability**. Set the website to the live portfolio. Pin only work a reviewer can inspect meaningfully, not repositories created to meet a quota.
+The repository connector cannot update the GitHub account bio, website field, pinned repositories or repository About descriptions. Suggested bio: Software Engineer | Cloud, Security and Reliability. Set the website to https://tumelodev-arch.github.io/ and pin only work that a reviewer can inspect meaningfully.
