@@ -20,7 +20,7 @@
   --gutter: clamp(1.1rem, 4vw, 3.4rem);
 }
 * { box-sizing: border-box; }
-html { scroll-behaviour: auto; scroll-padding-top: 1.25rem; background: var(--paper); }
+html { scroll-behavior: auto; scroll-padding-top: 1.25rem; background: var(--paper); }
 body {
   position: relative;
   min-width: 320px;
@@ -296,3 +296,12 @@ strong { color: var(--ink); }
   .resume-section, .resume-head { break-inside: avoid; }
   a { color: #111; text-decoration: none; }
 }
+
+/* Notebook index and print-only controls. */
+.note-list { border-top: 1px solid var(--ink); }
+.notes-index-link { display: block; padding: .8rem .2rem; border-bottom: 1px solid var(--ink); color: var(--ink); font-size: .84rem; font-weight: 700; text-decoration: none; }
+.notes-index-link::after { content: "  ↘"; color: var(--blue); }
+.notes-index-link:hover { padding-left: .6rem; background: var(--paper-deep); color: var(--ink); }
+.no-print { }
+.contact-actions-row { margin-top: 1.2rem; }
+@media print { .no-print { display: none !important; } }
