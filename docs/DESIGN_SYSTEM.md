@@ -9,7 +9,7 @@ The portfolio reads like a test report. The QA practice is the organising idea, 
 - Paper: `#F3EEE3`
 - Surface: `#FBF8F1`
 - Ink: `#14161A`
-- Muted ink: `#5B606A`
+- Muted ink: `#555A63`
 - Rules: `#D9D2C3`
 - Accent: `#E4572E`
 - Terminal: `#101314`
