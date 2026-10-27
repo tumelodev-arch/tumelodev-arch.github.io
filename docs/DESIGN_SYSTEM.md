@@ -39,4 +39,4 @@ Use 8 px increments, with 4 px for small label spacing. Desktop rail is 240 px; 
 
 ## Contrast note
 
-Normal text must meet 4.5:1 and large text 3:1. Ink on paper, ink on surface, muted ink on paper, and terminal text on terminal pass AA by calculation. Vermilion `#E4572E` is used for emphasis and decorative accents, not normal-size text on light paper. Small text links and heading emphasis use darker vermilion `#B93B1A` on light surfaces; dark mode uses `#FF8A6B`. Re-check all implemented pairs before release.
+Normal text must meet 4.5:1 and large text 3:1. Ink on paper, ink on surface, muted ink on paper, and terminal text on terminal pass AA by calculation. Vermilion `#E4572E` is used for emphasis and decorative accents, not normal-size text on light paper. Small text links and heading emphasis use darker vermilion `#A73516` on light surfaces; dark mode uses `#FF8A6B`. Re-check all implemented pairs before release.
