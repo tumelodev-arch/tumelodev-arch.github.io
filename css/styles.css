@@ -6,7 +6,7 @@
   --ink: #141822;
   --ink-soft: #363b49;
   --muted: #596071;
-  --quiet: #73798a;
+  --quiet: #626879;
   --rule: #c9c4b9;
   --blue: #2445f4;
   --blue-deep: #1732c9;
@@ -27,8 +27,8 @@ body {
   background-size: 34px 34px; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
 a { color: var(--blue-deep); text-underline-offset: .22em; text-decoration-thickness: 1px; }
-a:hover { color: var(--orange); }
-a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+a:hover { color: var(--ink); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 button, input, select, textarea { font: inherit; }
 img, svg { display: block; max-width: 100%; }
 h1, h2, h3, h4, p { margin-top: 0; }
