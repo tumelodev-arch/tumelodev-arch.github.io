@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tumelodev-arch.github.io/sitemap.xml
